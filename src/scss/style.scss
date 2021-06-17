@@ -25,14 +25,12 @@ html{
 body{
     font-size: 1.6rem;
     font-family: $font;
-    overflow-x: hidden;
     position: relative;
     line-height: 1;
-    background-color: $color-black;
-    // background-image: url('../images/background.png');
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 img{
     width: 100%;
@@ -41,6 +39,7 @@ img{
     // vertical-align: middle;
 }
 .wrapper{
+    width: 100%;
     overflow-x: hidden;
 }
 .container{
@@ -53,6 +52,62 @@ img{
         width: 84vw;
     }
 }
+.br-pc{
+    @include tab{
+        display: none
+    }
+}
+
+//-------------------------------
+//  h2
+//-------------------------------
+.head-title{
+    height: auto;
+    position: relative;
+    padding-left: 1.6rem;
+    @include wide-pc{
+        padding-left: 16px;
+    }
+    @include tab{
+        padding-left: 1.2rem;
+    }
+    &:before{
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 4rem;
+        border-radius: 4px;
+        background-color: $color-green;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @include wide-pc{
+            height: 40px;
+        }
+        @include tab{
+            width: 4px;
+            border-radius: 2px;
+        }
+    }
+}
+
+//-------------------------------
+//  link-btn
+//-------------------------------
+.link-btn{
+    @include font-style(1.6rem, $color-white, bold);
+    display: inline-block;
+    text-align: center;
+    width: 26.8rem;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    border-radius: 2.4rem;
+    background-color: $color-link;
+    i{
+        margin-left: 0.8rem;
+    }
+}
 
 //-------------------------------
 //  header
@@ -60,175 +115,182 @@ img{
 @import 'header/_header.scss';
 
 //-------------------------------
-//  SNS
-//-------------------------------
-.sns{
-    display: flex;
-    &_item{
-        display: inline-block;
-        width: 3.2rem;
-        height: 3.2rem;
-    }
-}
-
-//-------------------------------
 //  main-visual
 //-------------------------------
 @import '_mainvisual.scss';
 
 // Swiperの上書き用CSS
-.swiper-button-next{
-    outline: none;
-    &.main-next{
-        right: 5rem;
-        @include wide-pc{
-            right: 50px;
-        }
-        @include tab{
-            right: 1.6rem;
-        }
-        &:after{
-            content: '\f054';
-            display: block;
-            font-size: 5rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 50px;
-            }
-            @include tab{
-                font-size: 3.2rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
-    &.next-common{
-        right: -6.4rem;
-        transition: filter 0.3s ease;
-        @include wide-pc{
-            right: -64px;
-        }
-        @include tab{
-            right: -3rem;
-        }
-        &:after{
-            content: '\f054';
-            display: block;
-            font-size: 3rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 30px;
-            }
-            @include tab{
-                font-size: 2.4rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
+@import '_swiper.scss';
 
-
-
-}
-.swiper-button-prev{
-    outline: none;
-    &.main-prev{
-        left: 5rem;
+//-------------------------------
+//  News
+//-------------------------------
+.news{
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    transform: translateY(-18%);
+    @include tab{
+        transform: translateY(0);
+        margin-top: 7.4rem;
+    }
+    &__box{
+        width: 96.2rem;
+        margin: 0 auto;
+        background-color: $color-white;
+        border: solid 4px $color-green;
+        border-radius: 3rem;
+        padding: 4.6rem 6.8rem;
+        position: relative;
         @include wide-pc{
-            right: 50px;
+            width: 962px;
+            border-radius: 30px;
+            padding: 46px 68px;
         }
         @include tab{
-            left: 1.6rem;
+            width: 100%;
+            border: solid 2px $color-green;
+            border-radius: 1.6rem;
+            padding: 4.7rem 1.6rem 4rem 1.6rem;
         }
-        &:after{
-            content: '\f053';
+        &:before{
+            content:'';
+            background-color: $color-green;
+            border: solid 4px $color-green;
+            border-radius: 3rem;
             display: block;
-            font-size: 5rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            z-index: -1;
             @include wide-pc{
-                font-size: 50px;
+                border-radius: 30px;
             }
             @include tab{
-                font-size: 3.2rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
+                border: solid 2px $color-green;
+                border-radius: 1.6rem;
+                top: 4px;
+                left: 4px;
             }
         }
     }
-    &.prev-common{
-        left: -6.4rem;
-        @include wide-pc{
-            left: -64px;
-        }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         @include tab{
-            left: -3rem;
-        }
-        &:after{
-            content: '\f053';
-            display: block;
-            font-size: 3rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 30px;
-            }
-            @include tab{
-                font-size: 2.4rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
+    &__head-title{
+        width: 11.2rem;
+        @include tab{
+            width: 10.8rem;
+            margin-bottom: 3.2rem;
+        }
+        
+    }
+    &__items{
+        width: 65.4rem;
+        @include tab{
+            width: 100%;
+        }
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: solid 1px $color-green;
+        padding: 1.6rem 0;
+        @include tab{
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1.2rem 0;
+        }
+        &:last-child{
+            border-bottom: solid 1px $color-green;
+        }
+    }
+    &__post-time{
+        @include font-style(1.6rem, $color-black, bold);
+        line-height: 1;
+        margin-right: 4rem;
+        @include tab{
+            font-size: 1.2rem;
+            margin-right: 0;
+            margin-bottom: 0.8rem;
+        }
+    }
+    &__title{
+        @include font-style(1.6rem, $color-black, normal);
+        line-height: 1;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        @include tab{
+            font-size: 1.2rem;
+            line-height: 1.5;
+            text-align: left;
+            -webkit-line-clamp: 2;
+        }
+    }
+    &__circle01{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        @include tab{
+            top: 1.2rem;
+            left: 1.2rem;
+        }
+    }
+    &__circle02{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        @include tab{
+            top: 1.2rem;
+            right: 1.2rem;
+        }
+    }
+    &__circle03{
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        @include tab{
+            bottom: 1.2rem;
+            right: 1.2rem;
+        }
+    }
+    &__circle04{
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        @include tab{
+            bottom: 1.2rem;
+            left: 1.2rem;
+        }
+    }
+    &__link-btn{
+        margin-top: 3.8rem;
+    }
 }
-.swiper-pagination-bullet{
-    background: $color-black;
-}
-.swiper-pagination-bullet-active{
-    background: $color-white;
-}
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
-    margin: 0 1.1rem;
+.circle{
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: solid 4px $color-green;
+    border-radius: 50%;
     @include wide-pc{
-        margin: 0 11px;
-    }
-}
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
-    bottom: 3rem;
-    @include wide-pc{
-        bottom: 30px;
+        width: 18px;
+        height: 18px;
     }
     @include tab{
-        bottom: 1.6rem;
+        width: 1rem;
+        height: 1rem;
+        border: solid 2px $color-green;
     }
 }

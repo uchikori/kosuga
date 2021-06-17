@@ -1,0 +1,13 @@
+.sns{
+    display: flex;
+    &__item{
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        @include wide-pc{
+            width: 32px;
+            height: 32px;
+
+        }
+    }
+}

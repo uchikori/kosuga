@@ -7,11 +7,17 @@
         @include wide-pc{
             padding: 16px 0;
         }
+        @include tab{
+            padding: 1.2rem 0;
+        }
     }
     &__logo{
         width: 42.4rem;
         @include wide-pc{
             width: 424px;
+        }
+        @include tab{
+            width: 24.8rem;
         }
     }
     &__sns{
@@ -19,6 +25,9 @@
         margin-left: auto;
         @include wide-pc{
             margin-right: 32px;
+        }
+        @include tab{
+            display: none;
         }
     }
     &__sns-item{
@@ -30,21 +39,9 @@
             margin-right: 0;
         }
     }
-    &__remote-navi{
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        // margin-right: 10rem;
-        position: absolute;
-        right: 10rem;
-        top: 1.5rem;
-        z-index: 99;
-        // transform: translateY(-50%);
-        // margin-top: -2.5rem;
+    &__search{
         @include tab{
             display: none;
-            right: 100px;
-            top: 15px;
         }
     }
 }
@@ -55,11 +52,11 @@
 @import '_search.scss';
 
 //-------------------------------
+//  sns
+//-------------------------------
+@import '_sns.scss';
+
+//-------------------------------
 //  global-navi
 //-------------------------------
 @import '_global-navi.scss';
-
-//-------------------------------
-//  toggle-manu
-//-------------------------------
-@import '_toggle-menu.scss';
