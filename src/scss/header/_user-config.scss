@@ -1,0 +1,24 @@
+.user-config{
+    width: 5rem;
+    height: 5rem;
+    background-color: $color-button-bg;
+    border-radius: 100%;
+    text-align: center;
+    transition: filter 0.3s ease;
+    &:hover{
+        transition: filter 0.3s ease;
+        filter: brightness(200%);
+    }
+    @include wide-pc{
+        width: 50px;
+        height: 50px;
+    }
+    i{
+        @include font-style(2.2rem, $color-head-gray, 700);
+        line-height: 5rem;
+        @include wide-pc{
+            font-size: 22px;
+            line-height: 50px;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.main-visual{
+    width: 100%;
+    position: relative;
+    &__student-media{
+        margin-bottom: 5rem;
+        @include wide-pc{
+            margin-bottom: 50px;
+        }
+        @include tab{
+            margin-bottom: 3rem;
+        }
+    }
+}
+.main-visual__wrapper{
+    width: 100%;
+}
+.main-visual__image{
+    width: 100%;
+    height: 78rem;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &_other{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @include wide-pc{
+            height: 300px;
+        }
+        @include tab{
+            height: 30rem;
+        }
+    }
+    &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.7;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    @include wide-pc{
+        height: 780px;
+    }
+    @include tab{
+        height: 56rem;
+    }
+}
+
+.main-visual__title{
+    display: flex;
+    position: relative;
+    @include font-style(3rem, $color-white, 700);
+    @include wide-pc{
+        font-size: 30px;
+    }
+    .tax-student &{
+        &:before{
+            content: '\f19d';
+            @include font-style(3.6rem, $color-white, 700);
+            font-family: "Font Awesome 5 Free";
+            margin-right: 1rem;
+            @include wide-pc{
+                font-size: 36px;
+            }
+        }
+    }
+    .tax-class &{
+        &:before{
+            content: '\f26c';
+            @include font-style(3.6rem, $color-white, 700);
+            font-family: "Font Awesome 5 Free";
+            margin-right: 1rem;
+            @include wide-pc{
+                font-size: 36px;
+            }
+        }
+    }
+}

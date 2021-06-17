@@ -1,0 +1,72 @@
+.toggle-menu{
+    width: 100%;
+    height: 8rem;
+    background: linear-gradient(to bottom, rgba(21, 21, 21, 1.0), rgba(21, 21, 21, 0.4));
+    position: absolute;
+    top: 100%;
+    z-index: 98;
+    @include wide-pc{
+        height: 80px;
+    }
+    @include tab{
+        height: 4.8rem;
+    }
+    &__inner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item{
+        margin-right: 6rem;
+        @include wide-pc{
+            margin-right: 60px;
+        }
+        @include tab{
+            margin-right: 2.4rem;
+        }
+    }
+    &__link{
+        @include font-style(1.5rem, $color-white, 700);
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:before{
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: $color-white;
+            position: absolute;
+            top: 130%;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        &:hover{
+            filter: brightness(200%);
+            &:before{
+                transition: width 0.3s ease;
+                width: 100%;
+            }
+        }
+        @include wide-pc{
+            font-size: 15px;
+        }
+        @include tab{
+            font-size: 1.2rem;
+        }
+        i{
+            @include font-style(2rem, $color-white, 700);
+            display: inline-block;
+            margin-right: 1rem;
+            @include wide-pc{
+                font-size: 20px;
+                margin-right: 10px;
+            }
+            @include tab{
+                font-size: 1.6rem;
+                margin-right: 0.8rem;
+            }
+        }
+    }
+}

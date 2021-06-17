@@ -1,0 +1,24 @@
+/* フォントファミリー*/
+$font: vdl-v7gothic,"Hiragino Sans", ヒラギノ角ゴシック,"Hiragino Kaku Gothic ProN", "Hiragino Sans", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+$font-main:'Nothing You Could Do', cursive;
+$font-mincho: YuMincho,'Yu Mincho', serif;
+
+/*フォントカラー*/
+$color-black:     #0F0F0F;
+$color-link:      #735500;
+$color-white:     #eeeeee;
+$color-new:       #BA2525;
+$color-bg1:       #383838;
+$color-bg2:       #464646;
+$color-head-logo: #999999;
+$color-button-bg: #2C2C2C;
+$color-head-gray: #666666;
+$color-border:    #151515;
+$color-watched:   #B1A516; 
+$color-border:    #3e3e3e;
+/*font-size, font-color, line-height指定*/
+@mixin font-style($font-size, $font-color, $font-weight){
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: $font-weight;
+}

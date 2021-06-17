@@ -1,0 +1,52 @@
+.tag{
+    color: $color-white;
+    .student-media &{
+        margin-bottom: 1.8rem;
+        @include wide-pc {
+            margin-bottom: 18px;
+        }
+        @include tab{
+            margin-bottom: 1.2rem;
+        }
+    }
+    .movie-media &{
+        margin-bottom: 0.9rem;
+        @include wide-pc {
+            margin-bottom: 9px;
+        }
+    }
+    i{
+        font-size: 1.2rem;
+        margin-right: 0.2rem;
+        @include wide-pc{
+            font-size: 12px;
+            margin-right: 2px;
+        }
+    }
+}
+.tag__link{
+    display: inline-block;
+    line-height: 1;
+    .student-media &{
+        font-size: 1.5rem;
+        @include wide-pc{
+            font-size: 15px;
+        }
+        @include tab{
+            font-size: 1.2rem;
+        }
+    }
+    .movie-contents &{
+        @include font-style(1.2rem, $color-white, 700);
+        @include wide-pc{
+            font-size: 12px;
+        }
+    }
+    .movie-media &{
+        @include font-style(1.2rem, $color-white, 700);
+        @include wide-pc{
+            font-size: 12px;
+        }
+    }
+
+}

@@ -1,0 +1,10 @@
+.description{
+    @include font-style(1.5rem, $color-white, 500);
+    line-height: 1.8;
+    @include wide-pc{
+        font-size: 15px;
+    }
+    @include tab{
+        font-size: 1.2rem;
+    }
+}

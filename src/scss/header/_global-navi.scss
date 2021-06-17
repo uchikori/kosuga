@@ -1,0 +1,92 @@
+.global-navi{
+    background-color: $color-black;
+    width: 30rem;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-left: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    display: block;
+    z-index: 1000;
+    @include wide-pc{
+        width: 300px;
+        height: 100vh;
+        padding-left: 20px;
+    }
+    &.menu-open{
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+    }
+    &__search{
+        padding: 2rem 0;
+        border-bottom: solid 1px $color-border;
+        @include wide-pc{
+            padding: 20px 0;
+        }
+    }
+    &__item{
+        padding: 2.6rem 0;
+        border-bottom: solid 1px $color-border;
+        background-color: $color-black;
+        @include font-style(1.4rem, $color-head-gray, 700);
+        @include wide-pc{
+            padding: 26px 0;
+            font-size: 14px;
+        }
+    }
+}
+.humberger{
+    width: 8rem;
+    height: 8rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    &:hover{
+        transition: filter 0.3s ease;
+        filter: brightness(200%);
+    }
+    @include wide-pc{
+        width: 80px;
+        height: 80px;
+    }
+    &__line{
+        width: 4rem;
+        height: 2px;
+        background-color: $color-head-gray;
+        margin-bottom: 1rem;
+        transition: transform 0.5s ease;
+        @include wide-pc{
+            width: 40px;
+            margin-bottom: 10px;
+        }
+        &:last-child{
+            margin-bottom: 0;
+            transition: transform 0.5s ease;
+        }
+        .menu-active &{
+            transition: transform 0.5s ease;
+            transform: translateY(0.6rem) rotate(45deg);
+            @include wide-pc{
+                transform: translateY(6px) rotate(45deg);
+            }
+            &:last-child{
+                transition: transform 0.5s ease;
+                transform: translateY(-0.6rem) rotate(-45deg);
+                @include wide-pc{
+                    transform: translateY(-6px) rotate(-45deg);
+                }
+            }
+        }
+    }
+}

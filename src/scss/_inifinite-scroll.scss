@@ -1,0 +1,38 @@
+.view-more-button{
+    width: 100%;
+    text-align: center;
+    @include font-style(1.4rem, $color-white, 700);
+    line-height: 3;
+    background-color: $color-bg1;
+    border-radius:  2.1rem;
+    display: inline-block;
+    transition: filter 0.3s ease;
+    &:hover{
+        transition: filter 0.3s ease;
+        filter: brightness(200%);
+    }
+    @include wide-pc{
+        font-size: 14px;
+        border-radius: 21px;
+    }
+}
+.inifinite__btn-margin{
+    margin: 3rem 0;
+    @include wide-pc{
+        margin: 30px 0;
+    }
+}
+.infinite-scroll-error{
+    width: 100%;
+    text-align: center;
+    @include font-style(1.4rem, $color-white, 700);
+    line-height: 3;
+    background-color: $color-bg1;
+    border-radius:  2.1rem;
+    display: inline-block;
+    transition: filter 0.3s ease;
+    @include wide-pc{
+        font-size: 14px;
+        border-radius: 21px;
+    }
+}

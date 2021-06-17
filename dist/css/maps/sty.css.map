@@ -1,0 +1,1 @@
+{"version":3,"sources":["sty.scss","sty.css"],"names":[],"mappings":"AAAA;EACI,YAAY;ACChB","file":"../sty.css","sourcesContent":[".test{\r\n    width: 100px;\r\n}",".test {\n  width: 100px;\n}\n"]}

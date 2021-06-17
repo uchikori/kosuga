@@ -1,0 +1,28 @@
+.meta{
+    display: flex;
+    align-items: center;
+}
+.meta-info{
+    background-color: $color-button-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-head-gray;
+    padding: 0 0.8em;
+    height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1;
+    &.watched{
+        color: $color-watched;
+    }
+    @include wide-pc{
+        height: 20px;
+        font-size: 12px;
+    }
+    i{
+        margin-right: 0.5rem;
+        @include wide-pc{
+            margin-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.header{
+    width: 100%;
+    z-index: 100;
+    position: relative;
+    &__top{
+        width: 100%;
+        background-color: $color-black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        @include wide-pc{
+            height: 40px;
+        }
+    }
+    &__logo{
+        @include font-style(1.3rem, $color-head-logo, 800);
+        @include wide-pc{
+            font-size: 13px;
+        }
+        @include tab{
+            font-size: 1.3rem;
+        }
+    }
+    &__remote-navi{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // margin-right: 10rem;
+        position: absolute;
+        right: 10rem;
+        top: 1.5rem;
+        z-index: 99;
+        // transform: translateY(-50%);
+        // margin-top: -2.5rem;
+        @include tab{
+            display: none;
+            right: 100px;
+            top: 15px;
+        }
+    }
+    &__search{
+        margin-right: 1.5rem;
+        @include wide-pc{
+            margin-right: 15px;
+        }
+    }
+}
+
+//-------------------------------
+//  search
+//-------------------------------
+@import '_search.scss';
+
+//-------------------------------
+//  user-config
+//-------------------------------
+@import '_user-config.scss';
+
+//-------------------------------
+//  global-navi
+//-------------------------------
+@import '_global-navi.scss';
+
+//-------------------------------
+//  toggle-manu
+//-------------------------------
+@import '_toggle-menu.scss';

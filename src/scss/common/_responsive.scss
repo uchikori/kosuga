@@ -1,0 +1,42 @@
+$wide-pc: 1401px;//ワイドPC
+$pc: 1024px; // PC
+$tab: 768px; // タブレット
+$sp: 480px;  // スマホ
+
+$pc-size: 1366;
+$tab-size: 768;
+
+// メディアクエリー
+@mixin wide-pc {
+  @media (min-width: ($wide-pc)) {
+    @content;
+  }
+}
+@mixin pc-tab {
+  @media (min-width: (769px))and(max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+//コンテンツ幅1168pxに対してのflex-boxの横幅(%指定)
+$flex-margin: 2.74%;
+$flex-item: 5.822%;
+@mixin flex-width($flex-itemNUm: 4){
+  $width: ($flex-item * $flex-itemNUm) + ($flex-margin * ($flex-itemNUm - 1));
+  width: $width;
+}

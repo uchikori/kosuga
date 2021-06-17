@@ -1,0 +1,92 @@
+.news{
+    width: 100%;
+    height: 50px;
+    background-color: $color-black;
+    @include tab{
+        height: auto;
+        padding: 1.6rem 0;
+    }
+    &__inner{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        @include tab{
+            flex-direction: column;
+        
+        }
+    }
+    &__head{
+        @include font-style(1.5rem, $color-head-gray, 700);
+        margin-right: 3rem;
+        @include wide-pc{
+            font-size: 15px;
+            margin-right: 30px;
+        }
+        @include tab{
+            margin-right: 0;
+            margin-bottom: 1.6rem;
+        }
+        i{
+           font-size: 1.6rem;
+           margin-right: 0.6rem; 
+           @include wide-pc{
+               font-size: 16px;
+               margin-right: 6px;
+           }
+        }
+    }
+    &__post-time{
+        @include font-style(1.2rem, $color-white, 700);
+        margin-right: 1rem;
+        @include wide-pc{
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        @include tab{
+            margin-right: auto;
+            margin-bottom: 0.8rem;
+        }
+    }
+    &__title{
+        @include font-style(1.3rem, $color-white, 700);
+        @include wide-pc{
+            font-size: 13px;
+        }
+        @include tab{
+            margin-right: auto;
+            max-width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+    &__link-btn{
+        width: 11.8rem;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        border-radius: 13px;
+        background-color: $color-button-bg; 
+        margin-left: auto;
+        @include font-style(1.3rem, $color-white, 700);
+        transition: filter 0.3s ease;
+        &:hover{
+            filter: brightness(150%);
+            transition: filter 0.3s ease;
+        }
+        @include wide-pc{
+            width: 118px;
+            font-size: 13px;
+        }
+        @include tab{
+            margin-left: 0;
+        }
+        i{
+            font-size: 1.2rem;
+            margin-left: 1.2rem;
+            @include wide-pc{
+                font-size: 12px;
+                margin-left: 12px;
+            }
+        }
+    }
+}
