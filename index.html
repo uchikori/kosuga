@@ -4,20 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UCHIWA Creative Studio.| 札幌市のWeb制作・ホームページ制作</title>
+  <meta name="description" content="小菅村をもっと楽しくおもしろく。観光やアクセスなど小菅村の魅力を楽しくおもしろい記事で発信中！">
+  <meta name="keywords" content="小菅村,こ、こすげぇー,公式,山梨,多摩川,源流,小菅,道の駅小菅,小菅の湯,観光">
+  <title>小菅村公式サイト | こ、こすげぇー | 小菅村の情報発信中！</title>
   <link rel="stylesheet" href="dist/css/swiper.min.css">
   <link rel="stylesheet" href="dist/css/style.css">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'kxj4yoo',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
   <!-- jQuery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="src/js/infinite-scroll.pkgd.min.js"></script>
@@ -26,202 +18,121 @@
   <div class="wrapper">
     <!-- header -->
     <header class="header">
-      <div class="header__top">
-        <h1 class="header__logo">WebDesign 1on1Lesson-ch</h1>
-      </div>
-      <div class="header__remote-navi">
+      <div class="header__inner container">
+
+        <h1 class="header__logo"><a href="/"><img src="dist/images/logo.png" alt="こ、こすげぇー。小菅村を楽しむ総合情報サイト"></a></h1>
+
+        <ul class="sns header__sns">
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.facebook.com/kokosuge/"><img src="dist/images/facebook.svg" alt="facebook"></a></li>
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.instagram.com/kokosuge/"><img src="dist/images/instagram.svg" alt="instagram"></a></li>
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
+        </ul>
+
         <form class="search header__search">
           <div class="search__box">
             <input type="text" class="search__input" name="s" placeholder="キーワード検索">
-            <button type="submit" class="search__submit">
-              <i class="fas fa-search"></i>
+            <button type="submit" class="search__submit" style="background-image: url(dist/images/serch-icon.svg)">
+              <img src="dist/images/serch-icon.svg" alt="検索">
             </button>
           </div>
         </form>
-        <a href="/page-mypage.html" class="user-config">
-          <i class="fas fa-user-cog"></i>
-        </a>
-      </div>
-      <nav class="toggle-menu header__toggle-menu">
-        <ul class="toggle-menu__inner container">
-          <li class="toggle-menu__item">
-            <a class="toggle-menu__link" href="/taxonomy-student.html">
-              <i class="fas fa-graduation-cap"></i>
-              生徒をみる
-            </a>
-          </li>
-          <li class="toggle-menu__item">
-            <a class="toggle-menu__link" href="/taxonomy-class.html">
-              <i class="fas fa-tv"></i>
-              授業を見る
-            </a>
-          </li>
-          <li class="toggle-menu__item margin-right-cancell">
-            <a class="toggle-menu__link" href="/">
-              <i class="fas fa-key"></i>
-              ログアウト
-            </a>
-          </li>
-        </ul>
-      </nav>
+  
+        <div class="humberger js-humberger">
+          <span class="humberger__line"></span>
+          <span class="humberger__line"></span>
+        </div>
+      </div>      
 
-      <nav class="global-navi">
-        <form class="search_size_l global-navi__search">
-          <div class="search__box">
-            <input type="text" class="search__input" name="s" placeholder="キーワード検索">
-            <button type="submit" class="search__submit"><i class="fas fa-search"></i></button>
-          </div>
-        </form>
-        <ul class="global-navi__list">
-          <li class="global-navi__item">
-            <a href="/" class="global-navi__link">
-              <i class="fas fa-home"></i>
-              ホーム
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/taxonomy-student.html" class="global-navi__link">
-              <i class="fas fa-graduation-cap"></i>
-              生徒をみる
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/taxonomy-class.html" class="global-navi__link">
-              <i class="fas fa-tv"></i>
-              授業を見る
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/archive.html" class="global-navi__link">
-              <i class="fas fa-bullhorn"></i>
-              お知らせ
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/page-mypage.html" class="global-navi__link">
-              <i class="fas fa-user-cog"></i>
-              マイページ
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/" class="global-navi__link">
-              <i class="fas fa-key"></i>
-              ログアウト
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/page-contact.html" class="global-navi__link">
-              <i class="fas fa-envelope"></i>
-              お問い合わせ
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/page-privacy.html" class="global-navi__link">
-              個人情報保護方針
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/page-termsofservice.html" class="global-navi__link">
-              利用規約
-            </a>
-          </li>
-          <li class="global-navi__item">
-            <a href="/page-law.html" class="global-navi__link">
-              特定商取引法に基づく表記
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="humberger js-humberger">
-        <span class="humberger__line"></span>
-        <span class="humberger__line"></span>
-      </div>
     </header><!-- /header -->
+    <nav class="global-navi">
+
+      <ul class="sns global-navi__sns">
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.facebook.com/kokosuge/"><img src="dist/images/facebook.svg" alt="facebook"></a></li>
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.instagram.com/kokosuge/"><img src="dist/images/instagram.svg" alt="instagram"></a></li>
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
+      </ul>
+
+      <form class="search global-navi__search">
+        <div class="search__box">
+          <input type="text" class="search__input" name="s" placeholder="キーワード検索">
+          <button type="submit" class="search__submit" style="background-image: url(dist/images/serch-icon.svg)">
+            <img src="dist/images/serch-icon.svg" alt="検索">
+          </button>
+        </div>
+      </form>
+
+      <ul class="global-navi__list container">
+        <li class="global-navi__item">
+          <a href="/" class="global-navi__link">
+            <span class="global-navi__icon"><img src="dist/images/menu01-icon.svg" alt="icon"></span>
+            TOPページ
+          </a>
+        </li>
+        <li class="global-navi__item">
+          <a href="https://ko-kosuge.jp/kosugemura/about/" class="global-navi__link">
+            <span class="global-navi__icon"><img src="dist/images/menu02-icon.svg" alt="icon"></span>
+            小菅村って<br class="br-pc">どんなころ？
+          </a>
+        </li>
+        <li class="global-navi__item">
+          <a href="https://ko-kosuge.jp/forvillager/" class="global-navi__link">
+            <span class="global-navi__icon"><img src="dist/images/menu03-icon.svg" alt="icon"></span>
+            小菅村民の方へ
+          </a>
+        </li>
+        <li class="global-navi__item">
+          <a href="https://ko-kosuge.jp/spring2021/" class="global-navi__link">
+            <span class="global-navi__icon"><img src="dist/images/menu04-icon.svg" alt="icon"></span>
+            季節の特集
+          </a>
+        </li>
+        <li class="global-navi__item menu-item-has-children">
+          <a class="global-navi__link">
+            <span class="global-navi__icon"><img src="dist/images/menu05-icon.svg" alt="icon"></span>
+            過ごし方
+            <i class="fas fa-caret-down"></i>
+          </a>
+          <ul class="global-navi__list--second">
+            <li class="global-navi__item--second">
+              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeplay/">遊ぶ</a>
+            </li>
+            <li class="global-navi__item--second">
+              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeeat/">食べる</a>
+            </li>
+            <li class="global-navi__item--second">
+              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugestay/">泊まる</a>
+            </li>
+          </ul>
+        </li>
+        <li class="global-navi__item">
+          <a href="https://ko-kosuge.jp/kosugemura/access/" class="global-navi__link">
+            <span class="global-navi__icon"><img src="dist/images/menu06-icon.svg" alt="icon"></span>
+            アクセス
+          </a>
+        </li>
+        <li class="global-navi__item">
+          <a href="https://ko-kosuge.jp/cat_kosuge/kokosuge/" class="global-navi__link">
+            <span class="global-navi__icon"><img src="dist/images/menu07-icon.svg" alt="icon"></span>
+            こ、こすげぇーについて
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <!-- main-visual -->
-    <div class="main-visual">
+    <!-- <div class="main-visual">
       <div class="main-visual__swiper">
         <div class="main-visual__wrapper swiper-wrapper">
           <div class="main-visual__image swiper-slide" style="background-image: url('dist/images/main-slide01.jpg');">
-            <div class="main-visual__student-media student-media container">
-              <div class="student-media__image_large">
-                <img src="dist/images/account_yuri.png" alt="account_yuri">
-              </div>
-              <div class="student-media__body">
-                <a class="student-media__student-name" href="/">Yuriさん</a>
-                <h2 class="student-media__title_large">
-                  転職に活用する
-                  <br>
-                  ポートフォリオサイト制作
-                </h2>
-                <div class="student-media__tag tag">
-                  <i class="fas fa-tags"></i>
-                  <a href="/" class="student-media__tag-link tag__link">デザインカンプ</a>
-                  <a href="/" class="student-media__tag-link tag__link">HTML</a>
-                  <a href="/" class="student-media__tag-link tag__link">CSS</a>
-                  <a href="/" class="student-media__tag-link tag__link">WordpRess</a>
-                  <a href="/" class="student-media__tag-link tag__link">バナーデザイン</a>
-                </div>
-                <div class="student-media__meta meta">
-                  <div class="student-media__meta-info meta-info movie-amount meta-info-margin-right"><i class="fas fa-tv"></i>16本</div>
-                  <div class="student-media__meta-info meta-info period">2019年8月〜現在</div>
-                </div>
-              </div>
-              <a class="link-btn student-media__link" href="/term-yuri.html"><i class="fas fa-info-circle"></i>詳しく見る</a>
-            </div>
-            <!-- <iframe class="swiper-slide" src="https://player.vimeo.com/video/382285668?background=1&amp;quality=360p" allow="autoplay; fullscreen" allowfullscreen="" frameborder="0">
-            </iframe> -->
+            
           </div>
           <div class="main-visual__image swiper-slide" style="background-image: url('dist/images/main-slide02.jpg');">
-            <div class="main-visual__student-media student-media student-media-mv container">
-              <div class="student-media__image">
-                <img src="dist/images/account_mizuno.png" alt="account_mizuno">
-              </div>
-              <div class="student-media__body">
-                <a class="student-media__student-name" href="/">Mizunoくん</a>
-                <h2 class="student-media__title">
-                  バナーデザインで学ぶデザインの基本
-                </h2>
-                <div class="student-media__tag tag">
-                  <i class="fas fa-tags"></i>
-                  <a href="/" class="student-media__tag-link tag__link">バナーデザイン</a>
-                </div>
-                <div class="student-media__meta meta">
-                  <div class="student-media__meta-info meta-info movie-amount meta-info-margin-right"><i class="fas fa-tv"></i>27本</div>
-                  <div class="student-media__meta-info meta-info period">2018年8月〜2018年9月</div>
-                </div>
-              </div>
-              <a class="link-btn student-media__link" href="/term-yuri.html"><i class="fas fa-info-circle"></i>詳しく見る</a>
-            </div>
-            <!-- <iframe src="https://player.vimeo.com/video/382285555?background=1&amp;quality=360p" allow="autoplay; fullscreen" allowfullscreen="" frameborder="0"></iframe> -->
+            
           </div>
           <div class="main-visual__image swiper-slide" style="background-image: url('dist/images/main-slide03.jpg');">
-            <div class="main-visual__student-media student-media student-media-mv container">
-              <div class="student-media__image">
-                <img src="dist/images/account_hirada.png" alt="account_hirada">
-              </div>
-              <div class="student-media__body">
-                <a class="student-media__student-name" href="/">Hiradaさん</a>
-                <h2 class="student-media__title">
-                  元Webデザイナーがモダンなサイト制作を学ぶ
-                </h2>
-                <div class="student-media__tag tag">
-                  <i class="fas fa-tags"></i>
-                  <a href="/" class="student-media__tag-link tag__link">ワイヤーフレーム</a>
-                  <a href="/" class="student-media__tag-link tag__link">デザインカンプ</a>
-                  <a href="/" class="student-media__tag-link tag__link">HTML</a>
-                  <a href="/" class="student-media__tag-link tag__link">CSS</a>
-                  <a href="/" class="student-media__tag-link tag__link">WordPress</a>
-                </div>
-                <div class="student-media__meta meta">
-                  <div class="student-media__meta-info meta-info movie-amount meta-info-margin-right"><i class="fas fa-tv"></i>6本</div>
-                  <div class="student-media__meta-info meta-info period">2019年8月〜現在</div>
-                </div>
-              </div>
-              <a class="link-btn student-media__link" href="/term-yuri.html"><i class="fas fa-info-circle"></i>詳しく見る</a>
-            </div>
-            <!-- <iframe src="https://player.vimeo.com/video/382285837?background=1&amp;quality=360p" allow="autoplay; fullscreen" allowfullscreen="" frameborder="0"></iframe> -->
+            
           </div>
         </div>
         <div class="next-prev-pagination">
@@ -230,458 +141,16 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-    </div>
+    </div> -->
     <!-- /main-visual -->
 
     <!-- news -->
-    <div class="news">
-      <div class="news__inner container">
-        <h2 class="news__head">
-          <i class="fas fa-bullhorn"></i>
-          Information
-        </h2>
-        <time class="news__post-time">2019年12月10日</time>
-        <h3 class="news__title">Yuriさんの新着動画を公開しました。</h3>
-        <a class="news__link-btn" href="/">
-          すべてみる
-          <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
-    </div>
     <!-- /news -->
 
     <!-- mainContents -->
-    <main class="main-contents">
-      <section class="student">
-        <div class="student__inner container">
-          <div class="student-media student__media">
-            <div class="student-media__image">
-              <img src="dist/images/account_mizuno.png" alt="account_mizuno">
-            </div>
-            <div class="student-media__body">
-              <a class="student-media__student-name" href="/">Mizunoくん</a>
-              <h2 class="student-media__title">
-                バナーデザインで学ぶデザインの基本
-              </h2>
-              <div class="student-media__tag tag">
-                <i class="fas fa-tags"></i>
-                <a href="/" class="student-media__tag-link tag__link">バナーデザイン</a>
-              </div>
-              <div class="student-media__meta meta">
-                <div class="student-media__meta-info meta-info movie-amount meta-info-margin-right"><i class="fas fa-tv"></i>27本</div>
-                <div class="student-media__meta-info meta-info period">2018年8月〜2018年9月</div>
-              </div>
-            </div>
-            <a class="link-btn student-media__link" href="/term-yuri.html"><i class="fas fa-info-circle"></i>詳しく見る</a>
-          </div>
-          <div class="movie-contents">
-            <div class="swiper-container student__swiper">
-              <div class="sort movie-contents__sort js-sort">
-                並替：
-                <i class="fas fa-caret-up js-sort-icon"></i>
-              </div>
-              <div class="movie-contents__items swiper-wrapper">
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_mizuno01.jpg" alt="thumbnail_mizuno01">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年10月28日
-                    </time>
-                    <div class="movie-contents__watched meta-info watched">
-                      視聴済
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#00</span>
-                    インタビュー［佐賀]
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">インタビュー</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_mizuno02.jpg" alt="thumbnail_mizuno02">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2018年8月7日
-                    </time>
-                    <div class="movie-contents__watched meta-info watched">
-                      視聴済
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#01</span>
-                    自己紹介
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">バナーデザイン</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_mizuno03.jpg" alt="thumbnail_mizuno03">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2018年8月7日
-                    </time>
-                    <div class="movie-contents__watched meta-info watched">
-                      視聴済
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#02</span>
-                    課題を出す
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">バナーデザイン</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_mizuno04.jpg" alt="thumbnail_mizuno04">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2018年8月11日
-                    </time>
-                    <div class="movie-contents__watched meta-info">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#03</span>
-                    ヒカルがデザインする
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">バナーデザイン</a>
-                  </div>
-  
-  
-  
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev prev-common prev"></div>
-            <div class="swiper-button-next next-common next"></div>
-          </div>
-        </div>
-      </section>
-      <section class="student bg-gray">
-        <div class="student__inner container">
-          <div class="student-media student__media">
-            <div class="student-media__image">
-              <img src="dist/images/account_yuri.png" alt="account_yuri">
-            </div>
-            <div class="student-media__body">
-              <a class="student-media__student-name" href="/">Yuriさん</a>
-              <h2 class="student-media__title">
-                転職に活用するポートフォリオサイト制作
-              </h2>
-              <div class="student-media__tag tag">
-                <i class="fas fa-tags"></i>
-                <a href="/" class="student-media__tag-link tag__link">デザインカンプ</a>
-                <a href="/" class="student-media__tag-link tag__link">HTML</a>
-                <a href="/" class="student-media__tag-link tag__link">CSS</a>
-                <a href="/" class="student-media__tag-link tag__link">WordPress</a>
-                <a href="/" class="student-media__tag-link tag__link">バナーデザイン</a>
-              </div>
-              <div class="student-media__meta meta">
-                <div class="student-media__meta-info meta-info movie-amount meta-info-margin-right"><i class="fas fa-tv"></i>16本</div>
-                <div class="student-media__meta-info meta-info period">2019年8月〜現在</div>
-              </div>
-            </div>
-            <a class="link-btn student-media__link" href="/term-yuri.html"><i class="fas fa-info-circle"></i>詳しく見る</a>
-          </div>
-          <div class="movie-contents">
-            <div class="swiper-container student__swiper">
-              <div class="sort movie-contents__sort js-sort ly-sort-top">
-                並替：
-                <i class="fas fa-caret-up js-sort-icon"></i>
-              </div>
-              <div class="movie-contents__items swiper-wrapper">
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_yuri01.jpg" alt="thumbnail_yuri01">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年11月16日
-                    </time>
-                    <div class="movie-contents__watched meta-info watched">
-                      視聴済
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#00</span>
-                    インタビュー［大阪]
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">インタビュー</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_yuri02.jpg" alt="thumbnail_yuri02">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年8月2日
-                    </time>
-                    <div class="movie-contents__watched meta-info">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#01</span>
-                    デザインカンプへの道
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">デザインカンプ</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_yuri03.jpg" alt="thumbnail_yuri03">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年8月11日
-                    </time>
-                    <div class="movie-contents__watched meta-info watched">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#02</span>
-                    デザインカンプへの道
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">デザインカンプ</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_yuri04.jpg" alt="thumbnail_yuri04">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年8月18日
-                    </time>
-                    <div class="movie-contents__watched meta-info">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#03</span>
-                    デザインカンプへの道
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">デザインカンプ</a>
-                  </div>
-  
-  
-  
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev prev-common prev"></div>
-            <div class="swiper-button-next next-common next"></div>
-          </div>
-        </div>
-      </section>
-      <section class="student">
-        <div class="student__inner container">
-          <div class="student-media student__media">
-            <div class="student-media__image">
-              <img src="dist/images/account_hirada.png" alt="account_hirada">
-            </div>
-            <div class="student-media__body">
-              <a class="student-media__student-name" href="/">Hiradaさん</a>
-              <h2 class="student-media__title">
-                元Webデザイナーがモダンなサイト制作を学ぶ
-              </h2>
-              <div class="student-media__tag tag">
-                <i class="fas fa-tags"></i>
-                <a href="/" class="student-media__tag-link tag__link">ワイヤーフレーム</a>
-                <a href="/" class="student-media__tag-link tag__link">デザインカンプ</a>
-                <a href="/" class="student-media__tag-link tag__link">HTML</a>
-                <a href="/" class="student-media__tag-link tag__link">CSS</a>
-                <a href="/" class="student-media__tag-link tag__link">WordPress</a>
-              </div>
-              <div class="student-media__meta meta">
-                <div class="student-media__meta-info meta-info movie-amount meta-info-margin-right"><i class="fas fa-tv"></i>6本</div>
-                <div class="student-media__meta-info meta-info period">2019年8月〜現在</div>
-              </div>
-            </div>
-            <a class="link-btn student-media__link" href="/term-yuri.html"><i class="fas fa-info-circle"></i>詳しく見る</a>
-          </div>
-          <div class="movie-contents">
-            <div class="swiper-container student__swiper">
-              <div class="sort movie-contents__sort js-sort ly-sort-top">
-                並替：
-                <i class="fas fa-caret-up js-sort-icon"></i>
-              </div>
-              <div class="movie-contents__items swiper-wrapper">
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_hirada01.jpg" alt="thumbnail_hirada01">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年12月14日
-                    </time>
-                    <div class="movie-contents__watched meta-info">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#00</span>
-                    インタビュー［福岡]
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">インタビュー</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_hirada02.jpg" alt="thumbnail_hirada02">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年8月31日
-                    </time>
-                    <div class="movie-contents__watched meta-info">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#01</span>
-                    コンテンツとワイヤーフレーム
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">ワイヤーフレーム</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_hirada03.jpg" alt="thumbnail_hirada03">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年9月7日
-                    </time>
-                    <div class="movie-contents__watched meta-info">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#02</span>
-                    ワイヤーフレーム
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">ワイヤーフレーム</a>
-                  </div>
-  
-  
-  
-                </div>
-                <div class="movie-contents__item swiper-slide">
-                  <a class="movie-contents__thumbnail" href="/">
-                    <img src="dist/images/thumbnail_hirada04.jpg" alt="thumbnail_hirada04">
-                  </a>
-                  <div class="movie-contents__meta meta">
-                    <time class="movie-contents__post-time meta-info ">
-                      2019年8月29日
-                    </time>
-                    <div class="movie-contents__watched meta-info">
-                      未視聴
-                    </div>
-                  </div>
-                  <h3 class="movie-contents__title">
-                    <span>#03</span>
-                    デザイン1
-                  </h3>   
-                  <div class="movie-contents__tag tag">
-                    <i class="fas fa-tags"></i>
-                    <a href="/" class="movie-contents__tag-link tag__link">デザインカンプ</a>
-                  </div>
-  
-  
-  
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev prev-common prev"></div>
-            <div class="swiper-button-next next-common next"></div>
-          </div>
-        </div>
-      </section>
-    </main>
     <!-- /mainContents -->
 
     <!-- footer -->
-    <footer class="footer">
-      <nav class="footer__menu container">
-        <ul class="footer__menu-items">
-          <div class="footer__menu-left">
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">ホーム</a></li>
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">授業を見る</a></li>
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">生徒を見る</a></li>
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">お知らせ</a></li>
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">マイページ</a></li>
-          </div>
-          <div class="footer__menu-right">
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">お問い合わせ</a></li>
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">個人情報保護方針</a></li>
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">利用規約</a></li>
-            <li class="footer__menu-item"><a href="/" class="footer__menu-link">特定商取引法に基づく表記</a></li>
-          </div>
-        </ul>
-      </nav>
-      <p class="footer__copyright ly-margin-copy">
-        <small class="footer__copyright-text">Copyright 1on1.design</small>
-      </p>
-    </footer>
     <!-- /footer -->
 
   </div>

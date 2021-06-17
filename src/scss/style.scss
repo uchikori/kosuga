@@ -11,7 +11,7 @@ html{
     計算式：10px /  デザインカンプの横幅 * 100
     画面サイズがデザインカンプ幅の時font-size = 10pxになる
     */
-    font-size: calc(10 / 1400 * 100) + vw;
+    font-size: calc(10 / 1920 * 100) + vw;
     // @include pc{
     //     font-size: calc(10 / 1200 * 100) + vw;
     // }
@@ -28,8 +28,11 @@ body{
     overflow-x: hidden;
     position: relative;
     line-height: 1;
-    font-weight: 700;
-    background-color: $color-bg1;
+    background-color: $color-black;
+    // background-image: url('../images/background.png');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
 }
 img{
     width: 100%;
@@ -41,7 +44,7 @@ img{
     overflow-x: hidden;
 }
 .container{
-    width: 960px;
+    width: 1168px;
     margin: 0 auto;
     @include pc-tab{
         width: 84vw;
@@ -50,26 +53,23 @@ img{
         width: 84vw;
     }
 }
-.bg-gray{
-    background-color: $color-bg2;   
-}
-.margin-right-cancell{
-    margin-right: 0!important;
-}
-.margin-left-cancell{
-    margin-left: 0!important;
-}
-.margin-top-cancell{
-    margin-top: 0!important;
-}
-.margin-bottom-cancell{
-    margin-bottom: 0!important;
-}
 
 //-------------------------------
 //  header
 //-------------------------------
 @import 'header/_header.scss';
+
+//-------------------------------
+//  SNS
+//-------------------------------
+.sns{
+    display: flex;
+    &_item{
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+}
 
 //-------------------------------
 //  main-visual
@@ -232,256 +232,3 @@ img{
         bottom: 1.6rem;
     }
 }
-
-//-------------------------------
-//  student-media
-//-------------------------------
-@import 'media/_student-media.scss';
-
-//-------------------------------
-//  news
-//-------------------------------
-@import '_news.scss';
-
-//-------------------------------
-//  student's-contents
-//-------------------------------
-.student{
-    padding: 7rem 0 6.4rem 0;
-    @include wide-pc{
-        padding: 70px 0 64px 0;
-    }
-    &__media{
-        margin-bottom: 4rem;
-    }
-    &__description{
-        max-width: 73rem;
-        margin-left: auto;
-        margin-top: 4px;
-        @include wide-pc{
-            max-width: 730px;
-        }
-        @include tab{
-            padding: 1rem 0;
-        }
-    }
-
-}
-
-.movie-contents{
-    width: 100%;
-    position: relative;
-    &__sort{
-        margin-bottom: 1rem;
-    }
-    &__items{
-        width: 100%;
-    }
-    &__item{
-        width: 22rem;
-        &:hover{
-            .movie-contents__thumbnail{
-                transform: scale(1.1);
-                filter: brightness(120%);
-                transition: filter 0.3s ease, transform 0.3s ease;
-            }
-        }
-        @include wide-pc{
-            width: 220px;
-        }
-        @include tab{
-            width: calc((100% - 2.6rem)/2);
-        }
-        @include sp{
-            width: 100%;
-        }
-    }
-    &__thumbnail{
-        width: 100%;
-        height: 12.4rem;
-        margin-bottom: 0.9rem;
-        display: block;
-        overflow: hidden;
-        object-fit: cover;
-        transform: scale(1.0);
-        position: relative;
-        transition: filter 0.3s ease, transform 0.3s ease;
-        @include wide-pc{
-            height: 124px;
-            margin-bottom: 9px;
-        }
-        @include tab{
-            height: auto;
-        }
-    }
-    &__meta{
-        margin-bottom: 0.9rem;
-        @include wide-pc{
-            margin-bottom: 9px;
-        }
-    }
-    &__post-time{
-        margin-right: 0.5rem;
-        @include wide-pc{
-            margin-right: 5px;
-        }
-    }
-    &__title{
-        @include font-style(1.5rem, $color-white, 700);
-        line-height: 1;
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        margin-bottom: 0.6rem;
-        @include wide-pc{
-            font-size: 15px;
-            margin-bottom: 6px;
-        }
-    }
-}
-
-.ly-movie-top{
-    margin-right: 2.6rem;
-}
-
-//-------------------------------
-//  student-movie
-//-------------------------------
-@import 'movie/_student-movie.scss';
-
-//-------------------------------
-//  meta
-//-------------------------------
-@import '_meta.scss';
-
-//-------------------------------
-//  tag
-//-------------------------------
-@import '_tag.scss';
-
-//-------------------------------
-//  sort
-//-------------------------------
-@import '_sort.scss';
-
-//-------------------------------
-//  description
-//-------------------------------
-@import '_description.scss';
-
-//-------------------------------
-//  Infinite scroll
-//-------------------------------
-@import '_inifinite-scroll.scss';
-
-//-------------------------------
-//  Class(授業一覧)
-//-------------------------------
-.class{
-    padding: 7.1rem 0;
-    &__inner{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        @include wide-pc{
-            padding: 71px;
-        }
-        @include tab{
-            &:after{
-                content: '';
-                display: block;
-                width: 25.4rem;
-            }
-        }
-    }
-    &__term-list{
-        padding-left: 5rem;
-        border-right: solid 1px $color-border;
-        @include wide-pc{
-            padding-left: 50px;
-        }
-        @include tab{
-            border-right: none;
-            margin-bottom: 6rem;
-            
-        }
-    }
-}
-
-//-------------------------------
-//  List-tag
-//-------------------------------
-.term-list{
-    width: 25.4rem;
-    @include wide-pc {
-        width: 254px;
-    }
-    &__title{
-        @include font-style(1.4rem, $color-white, 700);
-        line-height: 2.6rem;
-        height: 2.6rem;
-        background-color: $color-button-bg;
-        padding: 0 2.3rem;
-        display: inline-block;
-        margin-bottom: 3rem;
-        @include wide-pc{
-            font-size: 14px;
-            height: 26px;
-            padding: 0 23px;
-            margin-bottom: 30px;
-            line-height: 26px;
-        }
-        i{
-            font-size: 1.2rem;
-            margin-right: 0.3rem;
-            @include wide-pc {
-                font-size: 12px;
-                margin-right: 3px;
-            }
-        }
-    }
-    &__item{
-        margin-bottom: 1rem;
-        @include wide-pc{
-            margin-bottom: 10px;
-        }
-    }
-}
-.list{
-    &__link{
-        padding: 0 1.5rem;
-        height: 4rem;
-        background-color: $color-black;
-        color: $color-white;
-        font-size: 1.5rem;
-        line-height: 4rem;
-        display: inline-block;
-        border-radius: 2rem;
-        transition: filter 0.3s ease;
-        &:hover{
-            filter: brightness(150%);
-            transition: filter 0.3s ease;
-        }
-        @include wide-pc{
-            padding: 0 15px;
-            height: 40px;
-            font-size: 15px;
-            border-radius:40px;
-            line-height: 40px;
-        }
-        i{
-            font-size: 1.3rem;
-            margin-right: 0.4rem;
-            @include wide-pc{
-                font-size: 13px;
-                margin-right: 4px;
-            }
-        }
-    }
-}
-
-//-------------------------------
-//  footer
-//-------------------------------
-@import '_footer.scss';

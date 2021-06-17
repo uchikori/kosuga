@@ -1,25 +1,33 @@
 .header{
     width: 100%;
-    z-index: 100;
-    position: relative;
-    &__top{
-        width: 100%;
-        background-color: $color-black;
+    &__inner{
+        padding: 1.6rem 0;
         display: flex;
-        justify-content: center;
         align-items: center;
-        height: 4rem;
         @include wide-pc{
-            height: 40px;
+            padding: 16px 0;
         }
     }
     &__logo{
-        @include font-style(1.3rem, $color-head-logo, 800);
+        width: 42.4rem;
         @include wide-pc{
-            font-size: 13px;
+            width: 424px;
         }
-        @include tab{
-            font-size: 1.3rem;
+    }
+    &__sns{
+        margin-right: 3.2rem;
+        margin-left: auto;
+        @include wide-pc{
+            margin-right: 32px;
+        }
+    }
+    &__sns-item{
+        margin-right: 1.6rem;
+        @include wide-pc{
+            margin-right: 16px;
+        }
+        &:last-child{
+            margin-right: 0;
         }
     }
     &__remote-navi{
@@ -39,23 +47,12 @@
             top: 15px;
         }
     }
-    &__search{
-        margin-right: 1.5rem;
-        @include wide-pc{
-            margin-right: 15px;
-        }
-    }
 }
 
 //-------------------------------
 //  search
 //-------------------------------
 @import '_search.scss';
-
-//-------------------------------
-//  user-config
-//-------------------------------
-@import '_user-config.scss';
 
 //-------------------------------
 //  global-navi

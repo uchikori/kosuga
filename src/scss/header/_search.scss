@@ -1,7 +1,8 @@
 .search{
-    width: 15rem;
+    width: 26.8rem;
+
     @include wide-pc{
-        width: 150px;
+        width: 268px;
     }
     &_size_l{
         width: 20rem;
@@ -10,14 +11,15 @@
         }
     }
     &__box{
-        height: 3rem;
-        background-color: $color-button-bg;
-        border-radius: 8rem;
+        height: 3.8rem;
+        border-radius: 1.9rem;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 0 1.5rem;
+        padding: 0 1.6rem;
+        border: solid 1px $color-black;
+        background-color: $color-search;
         @include wide-pc {
             height: 30px;
             border-radius: 80px;
@@ -25,21 +27,17 @@
         }
     }
     &__input{
-        @include font-style(1.3rem, $color-head-gray, 700);
+        @include font-style(1.4rem, $color-black, 700);
         display: inline-block;
         line-height: 1;
         max-width: 100%;
         @include wide-pc {
-            font-size: 13px;
+            font-size: 14px;
         }
     }
     &__submit{
-        i{
-            @include font-style(1.3rem, $color-head-gray, 700);
-            line-height: 1;
-            @include wide-pc{
-                font-size: 13px;
-            }
-        }
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
     }
 }
