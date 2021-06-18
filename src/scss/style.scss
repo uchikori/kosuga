@@ -12,9 +12,9 @@ html{
     画面サイズがデザインカンプ幅の時font-size = 10pxになる
     */
     font-size: calc(10 / 1920 * 100) + vw;
-    // @include pc{
-    //     font-size: calc(10 / 1200 * 100) + vw;
-    // }
+    @include pc{
+        font-size: calc(10 / 1200 * 100) + vw;
+    }
     @include tab{
         font-size: calc(10 / 768 * 100) + vw;
     }
@@ -74,7 +74,7 @@ img{
     &:before{
         content: '';
         display: inline-block;
-        width: 8px;
+        width: 0.8rem;
         height: 4rem;
         border-radius: 4px;
         background-color: $color-green;
@@ -96,16 +96,27 @@ img{
 //  link-btn
 //-------------------------------
 .link-btn{
-    @include font-style(1.6rem, $color-white, bold);
+    @include font-style(16px, $color-white, bold);
     display: inline-block;
     text-align: center;
-    width: 26.8rem;
-    height: 4.8rem;
-    line-height: 4.8rem;
-    border-radius: 2.4rem;
+    width: 268px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 24px;
     background-color: $color-link;
+    @include pc{
+        font-size: 1.6rem;
+        width: 26.8rem;
+        height: 4.8rem;
+        line-height: 4.8rem;
+        border-radius: 2.4rem;
+        
+    }
     i{
-        margin-left: 0.8rem;
+        margin-left: 8px;
+        @include pc{
+            margin-left: 0.8rem;
+        }
     }
 }
 
@@ -125,172 +136,232 @@ img{
 //-------------------------------
 //  News
 //-------------------------------
-.news{
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    transform: translateY(-18%);
-    @include tab{
-        transform: translateY(0);
-        margin-top: 7.4rem;
-    }
-    &__box{
-        width: 96.2rem;
-        margin: 0 auto;
-        background-color: $color-white;
-        border: solid 4px $color-green;
-        border-radius: 3rem;
-        padding: 4.6rem 6.8rem;
+@import '_news.scss';
+
+//-------------------------------
+//  Type-select
+//-------------------------------
+.type-select{
+    width: 100%;
+    padding: 160px 0;
+    background-image: url('../images/background02.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include pc{
+        background: #E0EBD1;
+        padding: 5.6rem 0 4rem 0;
         position: relative;
-        @include wide-pc{
-            width: 962px;
-            border-radius: 30px;
-            padding: 46px 68px;
-        }
-        @include tab{
-            width: 100%;
-            border: solid 2px $color-green;
-            border-radius: 1.6rem;
-            padding: 4.7rem 1.6rem 4rem 1.6rem;
-        }
         &:before{
-            content:'';
-            background-color: $color-green;
-            border: solid 4px $color-green;
-            border-radius: 3rem;
+            content: '';
             display: block;
-            width: 100%;
-            height: 100%;
+            width: 64px;
+            height: 52px;
             position: absolute;
-            top: 6px;
-            left: 6px;
-            z-index: -1;
-            @include wide-pc{
-                border-radius: 30px;
-            }
-            @include tab{
-                border: solid 2px $color-green;
-                border-radius: 1.6rem;
-                top: 4px;
-                left: 4px;
-            }
+            background-image: url('../images/tree01.svg');
+            top: 0;
+            right: 0;
+            transform: translate(-50%, -50%);
         }
+        &:after{
+            content: '';
+            display: block;
+            width: 64px;
+            height: 46px;
+            position: absolute;
+            background-image: url('../images/tree02.svg');
+            bottom: 0;
+            left: 0;
+            // transform: translate(50%, 50%);
+        }
+    }
+    @include tab{
+        // padding: 7rem 0;
     }
     &__inner{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @include tab{
-            flex-direction: column;
-            align-items: flex-start;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        @include sp{
+            justify-content: center;
         }
     }
-    &__head-title{
-        width: 11.2rem;
-        @include tab{
-            width: 10.8rem;
-            margin-bottom: 3.2rem;
+    &__type-card{
+        @include pc{
+            margin-bottom: 5.6rem;
         }
-        
+        @include sp{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
     }
-    &__items{
-        width: 65.4rem;
-        @include tab{
+}
+.type-card{
+    width: calc((100% - 96px)/4);
+    display: block;
+    background-color: #ABC94E;
+    background-image: radial-gradient(#74A420 30%, transparent 30%),radial-gradient(#74A420 30%, transparent 30%);
+    background-position: 0 0 , 8px 8px;
+    background-size: 16px 16px;
+    border-radius: 16px;
+    padding: 0 8px 14px 8px;
+    text-align: center;
+    opacity: 1;
+    box-shadow: none;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    @include pc{
+        width: 26.8rem;
+        background-position: 0 0 , 0.8rem 0.8rem;
+        background-size: 1.6rem 1.6rem;
+        border-radius: 1.6rem;
+        padding: 0 0.8rem 1.4rem 0.8rem;
+    }
+    @include sp{
+        width: 100%;
+        height: 12.9rem;
+        padding: 0rem 0.8rem 1.6rem 0.8rem;
+    }
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+        transition: opacity 0.3s ease, box-shadow 0.3s ease;
+        .type-card__figure{
+            img{
+                transform: scale(1.1);
+                transition: transform 0.3s ease;
+                
+            }
+        }
+    }
+    &__ribbon{
+        width: 224px;
+        height: 32px;
+        display: inline-block;
+        position: relative;
+        transform: translateY(-50%);
+        @include pc{
+            width: 22.4rem;
+            height: 3.2rem;
+        }
+        &:before{
+            content: '';
+            display: block;
             width: 100%;
+            height: 100%;
+            transform: skew(-24deg);
+            background-color: $color-link;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
-    }
-    &__item{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: solid 1px $color-green;
-        padding: 1.6rem 0;
-        @include tab{
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 1.2rem 0;
-        }
-        &:last-child{
-            border-bottom: solid 1px $color-green;
-        }
-    }
-    &__post-time{
-        @include font-style(1.6rem, $color-black, bold);
-        line-height: 1;
-        margin-right: 4rem;
-        @include tab{
-            font-size: 1.2rem;
-            margin-right: 0;
-            margin-bottom: 0.8rem;
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: skew(24deg);
+            background-color: $color-link;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
     &__title{
-        @include font-style(1.6rem, $color-black, normal);
-        line-height: 1;
-        display: -webkit-box;
+        @include font-style(14px, $color-white, bold);
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @include pc{
+            font-size: 1.4rem;
+        }
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        @include sp{
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: -1rem;
+        }
+    }
+    &__figure{
+        width: 100%;
+        height: 173px;
+        margin-bottom: 8px;
         overflow: hidden;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        @include tab{
-            font-size: 1.2rem;
-            line-height: 1.5;
-            text-align: left;
-            -webkit-line-clamp: 2;
+        object-fit: cover;
+        position: relative;
+        border-radius: 6px;
+        @include pc{
+            height: 17.3rem;
+            margin-bottom: 0.8rem;
+            border-radius: 0.6rem;
+        }
+        @include sp{
+            width: calc(96.3%/2);
+            height: 8.9rem;
+            margin-bottom: 0;
+        }
+        img{
+            transform: scale(1.0);
+            transition: transform 0.3s ease;
         }
     }
-    &__circle01{
-        position: absolute;
-        top: 2rem;
-        left: 2rem;
-        @include tab{
-            top: 1.2rem;
-            left: 1.2rem;
+    &__text{
+        width: 100%;
+        height: 68px;
+        background-color: #FFF7DB;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include pc{
+            height: 6.8rem;
+            border-radius: 0.6rem;
+        }
+        @include sp{
+            width: calc(96.3%/2);
+            height: 8.9rem;
         }
     }
-    &__circle02{
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        @include tab{
-            top: 1.2rem;
-            right: 1.2rem;
+    &__sub-title01{
+        width: 192px;
+        @include pc{
+            width: 19.2rem;
+        }
+        @include sp{
+            width: 12.8rem;
         }
     }
-    &__circle03{
-        position: absolute;
-        bottom: 2rem;
-        right: 2rem;
-        @include tab{
-            bottom: 1.2rem;
-            right: 1.2rem;
+    &__sub-title02{
+        width: 130px;
+        @include pc{
+            width: 13rem;
+        }
+        @include sp{
+            width: 9.6rem;
         }
     }
-    &__circle04{
-        position: absolute;
-        bottom: 2rem;
-        left: 2rem;
-        @include tab{
-            bottom: 1.2rem;
-            left: 1.2rem;
+    &__sub-title03{
+        width: 114px;
+        @include pc{
+            width: 11.4rem;
+        }
+        @include sp{
+            width: 8rem;
         }
     }
-    &__link-btn{
-        margin-top: 3.8rem;
-    }
-}
-.circle{
-    display: block;
-    width: 1.8rem;
-    height: 1.8rem;
-    border: solid 4px $color-green;
-    border-radius: 50%;
-    @include wide-pc{
-        width: 18px;
-        height: 18px;
-    }
-    @include tab{
-        width: 1rem;
-        height: 1rem;
-        border: solid 2px $color-green;
+    &__sub-title04{
+        width: 160px;
+        @include pc{
+            width: 16rem;
+        }
+        @include sp{
+            width: 10.6rem;
+        }
     }
 }

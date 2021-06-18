@@ -1,10 +1,10 @@
 .swiper-button-next{
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 64px;
+    height: 64px;
     outline: none;
-    @include wide-pc{
-        width: 64px;
-        height: 64px;
+    @include pc{
+        width: 6.4rem;
+        height: 6.4rem;
     }
     @include tab{
         width: 4.8rem;
@@ -23,12 +23,6 @@
             background-repeat: no-repeat;
             background-position: center;
             transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 50px;
-            }
-            @include tab{
-                font-size: 3.2rem;
-            }
         }
         &:hover{
             &:after{
@@ -38,10 +32,10 @@
         }
     }
     &.next-common{
-        right: -6.4rem;
+        right: -64px;
         transition: filter 0.3s ease;
-        @include wide-pc{
-            right: -64px;
+        @include pc{
+            right: -6.4rem;
         }
         @include tab{
             right: -3rem;
@@ -73,12 +67,12 @@
 
 }
 .swiper-button-prev{
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 64px;
+    height: 64px;
     outline: none;
-    @include wide-pc{
-        width: 64px;
-        height: 64px;
+    @include pc{
+        width: 6.4rem;
+        height: 6.4rem;
     }
     @include tab{
         width: 4.8rem;
@@ -97,12 +91,6 @@
             background-repeat: no-repeat;
             background-position: center;
             transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 50px;
-            }
-            @include tab{
-                font-size: 3.2rem;
-            }
         }
         &:hover{
             &:after{
@@ -156,16 +144,19 @@
     background: #959595;
     width: 10px;
     height: 10px;
-    margin: 0 1rem;
+    margin: 0 10px;
     opacity: 1;
+    @include pc{
+        margin: 0 1rem;
+    }
 }
 .swiper-pagination-bullet-active{
     background: $color-green;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
-    margin: 0 1.1rem;
-    @include wide-pc{
-        margin: 0 11px;
+    margin: 0 11px;
+    @include pc{
+        margin: 0 1.1rem;
     }
 }
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{

@@ -1,11 +1,11 @@
 .global-navi{
     background-color: $color-green;
     width: 100%;
-    height: 7.3rem;
+    height: 73px;
     transition: transform 0.5s ease;
     z-index: 1000;
-    @include wide-pc{
-        height: 73px;
+    @include pc{
+        height: 7.3rem;
     }
     @include tab{
         position: fixed;
@@ -22,9 +22,9 @@
         transition: transform 0.5s ease;
     }
     &__sns{
-        margin-right: 3.2rem;
-        @include wide-pc{
-            margin-right: 32px;
+        margin-right: 32px;
+        @include pc{
+            margin-right: 3.2rem;
         }
         @include tab{
             margin: 4rem 0;
@@ -69,14 +69,14 @@
             content: '';
             display: block;
             width: 1px;
-            height: 4.4rem;
+            height: 44px;
             background-color: $color-white;
             position: absolute;
             top: 50%;
             right: 0;
             transform: translateY(-50%);
-            @include wide-pc{
-                height: 44px;
+            @include pc{
+                height: 4.4rem;
             }
             @include tab{
                 width: 100%;
@@ -99,15 +99,15 @@
         }
     }
     &__link{
-        @include font-style(1.4rem, $color-white, bold);
+        @include font-style(14px, $color-white, bold);
         line-height: 1.5;
         height: 100%;
         text-align: center;
         display: flex;
         justify-content:center;
         align-items: center;   
-        @include wide-pc{
-            font-size: 14px;
+        @include pc{
+            font-size: 1.4rem;
         }
         @include tab{
             font-size: 1.6rem;
@@ -124,14 +124,14 @@
 
     }
     &__link--second{
-        @include font-style(1.4rem, $color-white, bold);
-        line-height: 4.4rem;
+        @include font-style(14px, $color-white, bold);
+        line-height: 44px;
         text-align: center; 
         display: block;
         height: 100%;
-        @include wide-pc {
-            font-size: 14px;
-            line-height: 44px;
+        @include pc {
+            font-size: 1.4rem;
+            line-height: 4.4rem;
         }
         @include tab{
             text-align: left;
@@ -174,11 +174,11 @@
         ul{
             li{
                 border-top: solid 1px $color-white;
-                height: 4.4rem;
+                height: 44px;
                 overflow: visible;
                 transition: height 0.3s ease;
-                @include wide-pc {
-                    height: 44px;
+                @include pc {
+                    height: 4.4rem;
                 }
             }
         }

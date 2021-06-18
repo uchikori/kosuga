@@ -1,8 +1,7 @@
 .search{
-    width: 26.8rem;
-
-    @include wide-pc{
-        width: 268px;
+    width: 268px;
+    @include pc{
+        width: 26.8rem;
     }
     &_size_l{
         width: 20rem;
@@ -11,33 +10,37 @@
         }
     }
     &__box{
-        height: 3.8rem;
-        border-radius: 1.9rem;
+        height: 38px;
+        border-radius: 19px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 0 1.6rem;
+        padding: 0 16px;
         border: solid 1px $color-black;
         background-color: $color-search;
-        @include wide-pc {
-            height: 30px;
-            border-radius: 80px;
-            padding: 0 15px;
+        @include pc {
+            height: 3.8rem;
+            border-radius: 1.9rem;
+            padding: 0 1.6rem;
         }
     }
     &__input{
-        @include font-style(1.4rem, $color-black, 700);
+        @include font-style(14px, $color-black, 700);
         display: inline-block;
         line-height: 1;
         max-width: 100%;
-        @include wide-pc {
-            font-size: 14px;
+        @include pc {
+            font-size: 1.4rem;
         }
     }
     &__submit{
         display: inline-block;
-        width: 1.6rem;
-        height: 1.6rem;
+        width: 16px;
+        height: 16px;
+        @include pc{
+            width: 1.6rem;
+            height: 1.6rem;
+        }
     }
 }

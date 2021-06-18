@@ -7,7 +7,7 @@
 }
 .main-visual__image{
     width: 100%;
-    height: 66.7rem;
+    height: 667px;
     display: flex;
     align-items: flex-end;
     transition: filter 0.3s ease;
@@ -15,8 +15,8 @@
         transition: filter 0.3s ease;
         filter: brightness(120%);
     }
-    @include wide-pc{
-        height: 667px;
+    @include pc{
+        height: 66.7rem;
     }
     @include tab{
         height: 31.5rem;
