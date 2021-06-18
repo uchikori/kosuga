@@ -23,10 +23,10 @@
         <h1 class="header__logo"><a href="/"><img src="dist/images/logo.png" alt="こ、こすげぇー。小菅村を楽しむ総合情報サイト"></a></h1>
 
         <ul class="sns header__sns">
-          <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
-          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.facebook.com/kokosuge/"><img src="dist/images/facebook.svg" alt="facebook"></a></li>
-          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.instagram.com/kokosuge/"><img src="dist/images/instagram.svg" alt="instagram"></a></li>
-          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge" target="_blank"  rel="noopener noreferrer"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.facebook.com/kokosuge/" target="_blank"  rel="noopener noreferrer"><img src="dist/images/facebook.svg" alt="facebook"></a></li>
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.instagram.com/kokosuge/" target="_blank"  rel="noopener noreferrer"><img src="dist/images/instagram.svg" alt="instagram"></a></li>
+          <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ" target="_blank"  rel="noopener noreferrer"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
         </ul>
 
         <form class="search header__search">
@@ -41,18 +41,12 @@
         <div class="humberger js-humberger">
           <span class="humberger__line"></span>
           <span class="humberger__line"></span>
+          <span class="humberger__line"></span>
         </div>
       </div>      
 
     </header><!-- /header -->
     <nav class="global-navi">
-
-      <ul class="sns global-navi__sns">
-        <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
-        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.facebook.com/kokosuge/"><img src="dist/images/facebook.svg" alt="facebook"></a></li>
-        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.instagram.com/kokosuge/"><img src="dist/images/instagram.svg" alt="instagram"></a></li>
-        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
-      </ul>
 
       <form class="search global-navi__search">
         <div class="search__box">
@@ -62,6 +56,13 @@
           </button>
         </div>
       </form>
+
+      <ul class="sns global-navi__sns">
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge" target="_blank"  rel="noopener noreferrer"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.facebook.com/kokosuge/" target="_blank"  rel="noopener noreferrer"><img src="dist/images/facebook.svg" alt="facebook"></a></li>
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.instagram.com/kokosuge/" target="_blank"  rel="noopener noreferrer"><img src="dist/images/instagram.svg" alt="instagram"></a></li>
+        <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ" target="_blank"  rel="noopener noreferrer"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
+      </ul>
 
       <ul class="global-navi__list container">
         <li class="global-navi__item">
@@ -96,13 +97,13 @@
           </a>
           <ul class="global-navi__list--second">
             <li class="global-navi__item--second">
-              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeplay/">遊ぶ</a>
+              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeplay/"><i class="fas fa-caret-right"></i>遊ぶ</a>
             </li>
             <li class="global-navi__item--second">
-              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeeat/">食べる</a>
+              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeeat/"><i class="fas fa-caret-right"></i>食べる</a>
             </li>
             <li class="global-navi__item--second">
-              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugestay/">泊まる</a>
+              <a class="global-navi__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugestay/"><i class="fas fa-caret-right"></i>泊まる</a>
             </li>
           </ul>
         </li>
@@ -122,33 +123,129 @@
     </nav>
 
     <!-- main-visual -->
-    <!-- <div class="main-visual">
-      <div class="main-visual__swiper">
+    <div class="main-visual">
+      <div class="main-visual__swiper swiper-container  container">
         <div class="main-visual__wrapper swiper-wrapper">
-          <div class="main-visual__image swiper-slide" style="background-image: url('dist/images/main-slide01.jpg');">
-            
-          </div>
-          <div class="main-visual__image swiper-slide" style="background-image: url('dist/images/main-slide02.jpg');">
-            
-          </div>
-          <div class="main-visual__image swiper-slide" style="background-image: url('dist/images/main-slide03.jpg');">
-            
-          </div>
+          <a href="/" class="main-visual__image swiper-slide">
+            <img src="dist/images/main-slide01.jpg" alt="main-slide01">
+          </a>
+          <a href="/" class="main-visual__image swiper-slide">
+            <img src="dist/images/main-slide02.jpg" alt="main-slide02">
+          </a>
+          <a href="/" class="main-visual__image swiper-slide">
+            <img src="dist/images/main-slide03.jpg" alt="main-slide03">
+          </a>
         </div>
-        <div class="next-prev-pagination">
-          <div class="swiper-button-prev main-prev"></div>
-          <div class="swiper-button-next main-next"></div>
-        </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev main-prev"></div>
+        <div class="swiper-button-next main-next"></div>
+        
       </div>
-    </div> -->
+      <div class="swiper-pagination"></div>
+    </div>
     <!-- /main-visual -->
 
     <!-- news -->
+    <section class="news sec-news container">
+      <div class="news__box">
+        <div class="news__inner">
+          <h2 class="head-title news__head-title">
+            <img src="dist/images/news-h2-title.svg" alt="新着情報">
+          </h2>
+          <div class="news__items">
+            <a class="news__item" href="/">
+              <time class="news__post-time" datetime="2021-02-18">2021/02/18</time>
+              <h3 class="news__title">小菅姓発祥の地。歴史を感じる「小菅城址」、天神山の史跡をめぐって。</h3>
+            </a>
+            <a class="news__item" href="/">
+              <time class="news__post-time" datetime="2021-02-12">2021/02/12</time>
+              <h3 class="news__title">手前みそ作りセット【オンラインワークショップ付】の販売を始めました。テストテストテスト</h3>
+            </a>
+            <a class="news__item" href="/">
+              <time class="news__post-time" datetime="2021-02-12">2021/02/12</time>
+              <h3 class="news__title">田舎での新しい働き方！小菅村のテレワーク実践者にインタビュー！テストテストテスト</h3>
+            </a>
+          </div>
+        </div>
+        <span class="news__circle01 circle"></span>
+        <span class="news__circle02 circle"></span>
+        <span class="news__circle03 circle"></span>
+        <span class="news__circle04 circle"></span>
+        
+      </div>
+      <a class="link-btn news__link-btn" href="/">過去のお知らせ<i class="fas fa-angle-double-right"></i></a>
+    </section>
     <!-- /news -->
 
-    <!-- mainContents -->
-    <!-- /mainContents -->
+    <!-- Type-select -->
+    <section class="type-select">
+      <div class="type-select__inner container">
+        <a class="type-card type-select__type-card" href="https://ko-kosuge.jp/forvillager/">
+          <div class="type-card__ribbon">
+            <h3 class="type-card__title type-select__title">小菅村民の方</h3>
+          </div>
+          
+          <div class="type-card__body">
+            <figure class="type-card__figure">
+              <img src="dist/images/card-image01.jpg" alt="image01">
+            </figure>
+            <div class="type-card__text">
+              <h4 class="type-card__sub-title01">
+                <img src="dist/images/card01-text.svg" alt="小菅村民向け情報">
+              </h4>
+            </div>
+          </div>
+        </a>
+        <a class="type-card type-select__type-card" href="https://ko-kosuge.jp/kosugemura/about/">
+          <div class="type-card__ribbon">
+            <h3 class="type-card__title type-select__title">小菅村について知りたい方</h3>
+          </div>
+          
+          <div class="type-card__body">
+            <figure class="type-card__figure">
+              <img src="dist/images/card-image02.jpg" alt="image02">
+            </figure>
+            <div class="type-card__text">
+              <h4 class="type-card__sub-title02">
+                <img src="dist/images/card02-text.svg" alt="小菅村ってどんなところ">
+              </h4>
+            </div>
+          </div>
+        </a>
+        <a class="type-card type-select__type-card" href="https://ko-kosuge.jp/kosugemura/">
+          <div class="type-card__ribbon">
+            <h3 class="type-card__title type-select__title">小菅村に訪れてみたい方</h3>
+          </div>
+          
+          <div class="type-card__body">
+            <figure class="type-card__figure">
+              <img src="dist/images/card-image03.jpg" alt="image03">
+            </figure>
+            <div class="type-card__text">
+              <h4 class="type-card__sub-title03">
+                <img src="dist/images/card03-text.svg" alt="小菅村での過ごし方">
+              </h4>
+            </div>
+          </div>
+        </a>
+        <a class="type-card type-select__type-card" href="https://ko-kosuge.jp/pointcard/">
+          <div class="type-card__ribbon">
+            <h3 class="type-card__title type-select__title">小菅村ファンの方</h3>
+          </div>
+          
+          <div class="type-card__body">
+            <figure class="type-card__figure">
+              <img src="dist/images/card-image04.png" alt="image04">
+            </figure>
+            <div class="type-card__text">
+              <h4 class="type-card__sub-title04">
+                <img src="dist/images/card04-text.svg" alt="小菅村人ポイントカード">
+              </h4>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- /Type-select -->
 
     <!-- footer -->
     <!-- /footer -->

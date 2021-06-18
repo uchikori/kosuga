@@ -12,9 +12,9 @@ html{
     画面サイズがデザインカンプ幅の時font-size = 10pxになる
     */
     font-size: calc(10 / 1920 * 100) + vw;
-    // @include pc{
-    //     font-size: calc(10 / 1200 * 100) + vw;
-    // }
+    @include pc{
+        font-size: calc(10 / 1200 * 100) + vw;
+    }
     @include tab{
         font-size: calc(10 / 768 * 100) + vw;
     }
@@ -25,14 +25,12 @@ html{
 body{
     font-size: 1.6rem;
     font-family: $font;
-    overflow-x: hidden;
     position: relative;
     line-height: 1;
-    background-color: $color-black;
-    // background-image: url('../images/background.png');
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 img{
     width: 100%;
@@ -41,6 +39,7 @@ img{
     // vertical-align: middle;
 }
 .wrapper{
+    width: 100%;
     overflow-x: hidden;
 }
 .container{
@@ -53,6 +52,73 @@ img{
         width: 84vw;
     }
 }
+.br-pc{
+    @include tab{
+        display: none
+    }
+}
+
+//-------------------------------
+//  h2
+//-------------------------------
+.head-title{
+    height: auto;
+    position: relative;
+    padding-left: 1.6rem;
+    @include wide-pc{
+        padding-left: 16px;
+    }
+    @include tab{
+        padding-left: 1.2rem;
+    }
+    &:before{
+        content: '';
+        display: inline-block;
+        width: 0.8rem;
+        height: 4rem;
+        border-radius: 4px;
+        background-color: $color-green;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @include wide-pc{
+            height: 40px;
+        }
+        @include tab{
+            width: 4px;
+            border-radius: 2px;
+        }
+    }
+}
+
+//-------------------------------
+//  link-btn
+//-------------------------------
+.link-btn{
+    @include font-style(16px, $color-white, bold);
+    display: inline-block;
+    text-align: center;
+    width: 268px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 24px;
+    background-color: $color-link;
+    @include pc{
+        font-size: 1.6rem;
+        width: 26.8rem;
+        height: 4.8rem;
+        line-height: 4.8rem;
+        border-radius: 2.4rem;
+        
+    }
+    i{
+        margin-left: 8px;
+        @include pc{
+            margin-left: 0.8rem;
+        }
+    }
+}
 
 //-------------------------------
 //  header
@@ -60,175 +126,242 @@ img{
 @import 'header/_header.scss';
 
 //-------------------------------
-//  SNS
-//-------------------------------
-.sns{
-    display: flex;
-    &_item{
-        display: inline-block;
-        width: 3.2rem;
-        height: 3.2rem;
-    }
-}
-
-//-------------------------------
 //  main-visual
 //-------------------------------
 @import '_mainvisual.scss';
 
 // Swiperの上書き用CSS
-.swiper-button-next{
-    outline: none;
-    &.main-next{
-        right: 5rem;
-        @include wide-pc{
-            right: 50px;
-        }
-        @include tab{
-            right: 1.6rem;
-        }
-        &:after{
-            content: '\f054';
-            display: block;
-            font-size: 5rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 50px;
-            }
-            @include tab{
-                font-size: 3.2rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
-    &.next-common{
-        right: -6.4rem;
-        transition: filter 0.3s ease;
-        @include wide-pc{
-            right: -64px;
-        }
-        @include tab{
-            right: -3rem;
-        }
-        &:after{
-            content: '\f054';
-            display: block;
-            font-size: 3rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 30px;
-            }
-            @include tab{
-                font-size: 2.4rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
+@import '_swiper.scss';
 
+//-------------------------------
+//  News
+//-------------------------------
+@import '_news.scss';
 
-
-}
-.swiper-button-prev{
-    outline: none;
-    &.main-prev{
-        left: 5rem;
-        @include wide-pc{
-            right: 50px;
-        }
-        @include tab{
-            left: 1.6rem;
+//-------------------------------
+//  Type-select
+//-------------------------------
+.type-select{
+    width: 100%;
+    padding: 160px 0;
+    background-image: url('../images/background02.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include pc{
+        background: #E0EBD1;
+        padding: 5.6rem 0 4rem 0;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            width: 64px;
+            height: 52px;
+            position: absolute;
+            background-image: url('../images/tree01.svg');
+            top: 0;
+            right: 0;
+            transform: translate(-50%, -50%);
         }
         &:after{
-            content: '\f053';
+            content: '';
             display: block;
-            font-size: 5rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 50px;
-            }
-            @include tab{
-                font-size: 3.2rem;
-            }
+            width: 64px;
+            height: 46px;
+            position: absolute;
+            background-image: url('../images/tree02.svg');
+            bottom: 0;
+            left: 0;
+            // transform: translate(50%, 50%);
         }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
-    &.prev-common{
-        left: -6.4rem;
-        @include wide-pc{
-            left: -64px;
-        }
-        @include tab{
-            left: -3rem;
-        }
-        &:after{
-            content: '\f053';
-            display: block;
-            font-size: 3rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 30px;
-            }
-            @include tab{
-                font-size: 2.4rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
-}
-.swiper-pagination-bullet{
-    background: $color-black;
-}
-.swiper-pagination-bullet-active{
-    background: $color-white;
-}
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
-    margin: 0 1.1rem;
-    @include wide-pc{
-        margin: 0 11px;
-    }
-}
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
-    bottom: 3rem;
-    @include wide-pc{
-        bottom: 30px;
     }
     @include tab{
-        bottom: 1.6rem;
+        // padding: 7rem 0;
+    }
+    &__inner{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        @include sp{
+            justify-content: center;
+        }
+    }
+    &__type-card{
+        @include pc{
+            margin-bottom: 5.6rem;
+        }
+        @include sp{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.type-card{
+    width: calc((100% - 96px)/4);
+    display: block;
+    background-color: #ABC94E;
+    background-image: radial-gradient(#74A420 30%, transparent 30%),radial-gradient(#74A420 30%, transparent 30%);
+    background-position: 0 0 , 8px 8px;
+    background-size: 16px 16px;
+    border-radius: 16px;
+    padding: 0 8px 14px 8px;
+    text-align: center;
+    opacity: 1;
+    box-shadow: none;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    @include pc{
+        width: 26.8rem;
+        background-position: 0 0 , 0.8rem 0.8rem;
+        background-size: 1.6rem 1.6rem;
+        border-radius: 1.6rem;
+        padding: 0 0.8rem 1.4rem 0.8rem;
+    }
+    @include sp{
+        width: 100%;
+        height: 12.9rem;
+        padding: 0rem 0.8rem 1.6rem 0.8rem;
+    }
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+        transition: opacity 0.3s ease, box-shadow 0.3s ease;
+        .type-card__figure{
+            img{
+                transform: scale(1.1);
+                transition: transform 0.3s ease;
+                
+            }
+        }
+    }
+    &__ribbon{
+        width: 224px;
+        height: 32px;
+        display: inline-block;
+        position: relative;
+        transform: translateY(-50%);
+        @include pc{
+            width: 22.4rem;
+            height: 3.2rem;
+        }
+        &:before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: skew(-24deg);
+            background-color: $color-link;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: skew(24deg);
+            background-color: $color-link;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__title{
+        @include font-style(14px, $color-white, bold);
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @include pc{
+            font-size: 1.4rem;
+        }
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        @include sp{
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: -1rem;
+        }
+    }
+    &__figure{
+        width: 100%;
+        height: 173px;
+        margin-bottom: 8px;
+        overflow: hidden;
+        object-fit: cover;
+        position: relative;
+        border-radius: 6px;
+        @include pc{
+            height: 17.3rem;
+            margin-bottom: 0.8rem;
+            border-radius: 0.6rem;
+        }
+        @include sp{
+            width: calc(96.3%/2);
+            height: 8.9rem;
+            margin-bottom: 0;
+        }
+        img{
+            transform: scale(1.0);
+            transition: transform 0.3s ease;
+        }
+    }
+    &__text{
+        width: 100%;
+        height: 68px;
+        background-color: #FFF7DB;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include pc{
+            height: 6.8rem;
+            border-radius: 0.6rem;
+        }
+        @include sp{
+            width: calc(96.3%/2);
+            height: 8.9rem;
+        }
+    }
+    &__sub-title01{
+        width: 192px;
+        @include pc{
+            width: 19.2rem;
+        }
+        @include sp{
+            width: 12.8rem;
+        }
+    }
+    &__sub-title02{
+        width: 130px;
+        @include pc{
+            width: 13rem;
+        }
+        @include sp{
+            width: 9.6rem;
+        }
+    }
+    &__sub-title03{
+        width: 114px;
+        @include pc{
+            width: 11.4rem;
+        }
+        @include sp{
+            width: 8rem;
+        }
+    }
+    &__sub-title04{
+        width: 160px;
+        @include pc{
+            width: 16rem;
+        }
+        @include sp{
+            width: 10.6rem;
+        }
     }
 }
