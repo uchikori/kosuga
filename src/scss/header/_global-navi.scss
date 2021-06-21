@@ -193,6 +193,9 @@
             left: 50%;
             transform: translateX(-50%);
         }
+        &.current{
+            opacity: 1;
+        }
         @include tab{
             display: none;
         }
@@ -220,6 +223,10 @@
                 transition: height 0.3s ease;
                 @include pc {
                     height: 4.4rem;
+                }
+                @include tab{
+                    height: auto;
+                    border-top: none;
                 }
             }
         }

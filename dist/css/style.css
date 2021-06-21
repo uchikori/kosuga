@@ -1414,6 +1414,10 @@ img {
           transform: translateX(-50%);
 }
 
+.global-navi__pager.current {
+  opacity: 1;
+}
+
 .menu-item-has-children ul li {
   border-top: none;
   height: 0;
@@ -3449,6 +3453,10 @@ img {
   .menu-item-has-children ul li {
     height: auto;
     overflow: visible;
+  }
+  .menu-item-has-children:hover ul li {
+    height: auto;
+    border-top: none;
   }
   .humberger {
     display: -webkit-box;

@@ -1,0 +1,189 @@
+.footer{
+    background-color: #E0EBD1;
+
+    &__inner{
+        padding: 80px 0 67px 0;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            width: 386px;
+            height: 105px;
+            background-image: url('../images/tree-icon.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            @include pc{
+                width: 38.6rem;
+                height: 10.5rem;
+            }
+            @include tab{
+                width: 27.1rem;
+                height: 7.4rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &:after{
+            content: '';
+            display: block;
+            width: 66px;
+            height: 58px;
+            background-image: url('../images/leaf-icon.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 0;
+            bottom: 24px;
+            @include pc{
+                width: 6.6rem;
+                height: 5.8rem;
+            }
+            @include tab{
+                display: none;
+            }
+        }
+        @include pc{
+            padding: 8rem 0 6.7rem 0;
+        }
+        @include tab{
+            padding: 2.4rem 0 11.4rem 0;
+        }
+    }
+    &__logo{
+        text-align: center;
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        @include tab{
+            flex-direction: column;
+        }
+    }
+    &__left{
+        margin: 24px 0 0 124px;
+        @include pc{
+            margin: 2.4rem 0 0 12.4rem;
+        }
+        @include tab{
+            margin: 2.4rem 0 2.2rem 0;
+            text-align: center;
+        }
+    }
+    &__sns{
+        margin-bottom: 38px;
+        @include pc{
+            margin-bottom: 3.8rem;
+        }
+        @include tab{
+            display: block;
+        }
+    }
+    &__copyright{
+        @include font-style(12px, $color-white, normal);
+        padding: 12px 0;
+        text-align: center;
+        background-color: $color-green;
+    }
+}
+.company{
+    &__name{
+        @include font-style(16px, $color-black, normal);
+        line-height: 1.5;
+        @include pc{
+            font-size: 1.6rem;
+        }
+    }
+    &__address{
+        list-style: none;
+        @include font-style(16px, $color-black, normal);
+        line-height: 1.5;
+        @include pc{
+            font-size: 1.6rem;
+        }
+    }
+}
+.site-map{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &.open{
+
+    }
+    @include pc{
+        flex-direction: column;
+    }
+    @include tab{
+        background-color: $color-green;
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+        padding: 1.2rem 0 0.6rem 0;
+        display: none;
+    }
+    &__title{
+        display: none;
+        @include tab{
+            width: 100vw;
+            margin: 0 calc(50% - 50vw);
+            display: block;
+            @include font-style(1.6rem, $color-white, bold);
+            padding: 1rem 0;
+            background-color: $color-green;
+
+        }
+        .fa-list{
+            @include font-style(2rem, $color-white, bold);
+            margin-right: 1rem;
+        }
+        .fa-caret-down{
+            @include font-style(2rem, $color-white, bold);
+            margin-left: 2rem;
+        }
+    }
+    &__list{
+        margin: 0 28px;
+        @include pc{
+            margin: 0 2.8rem;
+        }
+        @include tab{
+            margin: 0 auto;
+        }
+    }
+    &__list--second{
+        padding-left: 12px;
+    }
+    &__item{
+        padding: 12px 0;
+    }
+    &__item--second{
+        padding: 6px 0;
+    }
+    &__link{
+        @include font-style(16px, $color-black, bold);
+        line-height: 1;
+        text-decoration: underline;
+    }
+    &__link--second{
+        @include font-style(14px, $color-black, normal);
+        line-height: 1;
+        i{
+            margin-right: 8px;
+        }
+    }
+    .site-map__link{
+        @include tab{
+            font-size: 1.6rem;
+            color: $color-white;
+        }
+    }
+    .site-map__link--second{
+        @include tab{
+            font-size: 1.4rem;
+            color: $color-white;
+        }
+    }
+}

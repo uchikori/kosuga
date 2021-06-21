@@ -1,0 +1,54 @@
+.link-btn{
+    @include font-style(16px, $color-white, bold);
+    display: inline-block;
+    text-align: center;
+    width: 268px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 24px;
+    background-color: $color-link;
+    transition: filter 0.3s ease;
+    &:hover{
+        filter: brightness(150%);
+        transition: filter 0.3s ease;
+        i{
+            transition: transform 0.3s ease;
+            transform: translateX(50%);
+        }
+    }
+    @include pc{
+        font-size: 1.6rem;
+        width: 26.8rem;
+        height: 4.8rem;
+        line-height: 4.8rem;
+        border-radius: 2.4rem;
+        
+    }
+    i{
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        @include pc{
+            margin-left: 0.8rem;
+        }
+    }
+    &_size_s{
+        @include font-style(16px, $color-white, bold);
+        display: block;
+        text-align: center;
+        width: 158px;
+        height: 28px;
+        line-height: 28px;
+        border-radius: 14px;
+        background-color: $color-link;
+        @include pc{
+            font-size: 1.6rem;
+            width: 15.8rem;
+            height: 2.8rem;
+            line-height: 2.8rem;
+            border-radius: 1.4rem;
+        }
+        @include sp{
+            width: 14.4rem;
+        }
+    }
+}

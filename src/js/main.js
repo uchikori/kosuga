@@ -1,5 +1,17 @@
 /**
  * 
+ * ヘッダーページインジケーター
+ * 
+ */
+jQuery('.global-navi__link').each(function(){
+    if(this.href == location.href){
+        jQuery(this).find('.global-navi__pager').addClass('current');
+    }
+});
+
+
+/**
+ * 
  * メインビジュアルのSwiper設定
  * 
  */

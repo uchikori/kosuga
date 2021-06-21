@@ -1,0 +1,27 @@
+.floating{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    width: 120px;
+    height: auto;
+    filter: brightness(100%);
+    transform: scale(1);
+    transition: filter 0.3s ease transform 0.3s ease;
+    z-index: 99;
+    &:hover{
+        filter: brightness(120%);
+        transform: scale(1.02);
+        transition:filter 0.3s ease, transform 0.3s ease;
+    }
+    @include pc{
+        width: 12rem;
+    }
+    @include tab{
+        width: 6.4rem;
+        right: 2.4rem;
+        bottom: 2.4rem;
+    }
+}

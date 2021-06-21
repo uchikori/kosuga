@@ -21,3 +21,12 @@ git push origin type
 git branch mainContents
 git checkout mainCVontents
 git checkout mainContents
+git add -A
+git commit -m[]
+git push origin mainContents
+git add -A
+git commi -m[]
+git commit -m[]
+git push origin mainContents
+git branch fix
+git checkout fix

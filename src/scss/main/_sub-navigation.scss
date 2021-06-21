@@ -1,0 +1,102 @@
+.sub-navigation{
+    display: flex;
+    justify-content: space-between;
+    @include tab{
+        flex-direction: column;
+    }
+    &__box{
+        background-color: $color-card-bg;
+        border-radius: 16px;
+        border: solid 2px $color-black;
+        padding: 32px 24px 20px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.26);
+        @include pc{
+            border-radius: 1.6rem;
+            padding: 3.2rem 2.4rem 2rem;
+        }
+        @include tab{
+            padding: 3.2rem 1.6rem 1.8rem;
+            margin-bottom: 4rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__head{
+        margin-bottom: 20px;
+        @include pc{
+            margin-bottom: 2rem;
+        }
+        @include tab{
+            margin-bottom: 1.8rem;
+        }
+    }
+    &__categories{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__category-item{
+        margin: 4px 8px;
+        @include pc{
+            margin: 0.4rem 0.8rem;
+        }
+        @include tab{
+            margin: 0.6rem 0.8rem;
+        }
+    }
+}
+.categories{
+    width: 568px;
+    @include pc{
+        width: 62.5620%;
+    }
+    @include tab{
+        width: 100%;
+    }
+    &__head-title{
+        width: 153px;
+    }
+}
+.category{
+    @include font-style(14px, $color-white, normal);
+    line-height: 24px;
+    display: block;
+    height: 24px;
+    padding: 0 16px;
+    background-color: $color-green;
+    border-radius: 12px;
+    @include pc{
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        height: 2.4rem;
+        padding: 0 1.6rem;
+        border-radius: 1.2rem;
+    }
+}
+.free-search{
+    width: 268px;
+    @include pc{
+        width: 26.8rem;
+    }
+    @include tab{
+        width: 100%;
+    }
+    &__head-title{
+        width: 200px;
+        @include pc{
+            width: 20rem;
+        }
+    }
+    &__lead-text{
+        @include font-style(12px, $color-black, bold);
+        line-height: 1.5;
+        margin-bottom: 20px;
+        @include pc{
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        @include tab{
+            margin-bottom: 3.8rem;
+        }
+    }
+}
