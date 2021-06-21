@@ -7,7 +7,8 @@
   <meta name="description" content="小菅村をもっと楽しくおもしろく。観光やアクセスなど小菅村の魅力を楽しくおもしろい記事で発信中！">
   <meta name="keywords" content="小菅村,こ、こすげぇー,公式,山梨,多摩川,源流,小菅,道の駅小菅,小菅の湯,観光">
   <title>小菅村公式サイト | こ、こすげぇー | 小菅村の情報発信中！</title>
-  <link rel="stylesheet" href="dist/css/swiper.min.css">
+  <!-- <link rel="stylesheet" href="dist/css/swiper.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
   <link rel="stylesheet" href="dist/css/style.css">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <!-- jQuery読み込み -->
@@ -20,7 +21,7 @@
     <header class="header">
       <div class="header__inner container">
 
-        <h1 class="header__logo"><a href="/"><img src="dist/images/logo.png" alt="こ、こすげぇー。小菅村を楽しむ総合情報サイト"></a></h1>
+        <h1 class="logo header__logo"><a href="/"><img src="dist/images/logo.png" alt="こ、こすげぇー。小菅村を楽しむ総合情報サイト"></a></h1>
 
         <ul class="sns header__sns">
           <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge" target="_blank"  rel="noopener noreferrer"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
@@ -29,7 +30,7 @@
           <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ" target="_blank"  rel="noopener noreferrer"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
         </ul>
 
-        <form class="search header__search">
+        <form class="search header__search" role="search" method="get" action="/">
           <div class="search__box">
             <input type="text" class="search__input" name="s" placeholder="キーワード検索">
             <button type="submit" class="search__submit" style="background-image: url(dist/images/serch-icon.svg)">
@@ -45,10 +46,12 @@
         </div>
       </div>      
 
-    </header><!-- /header -->
+    </header>
+    <!-- /header -->
+
     <nav class="global-navi">
 
-      <form class="search global-navi__search">
+      <form class="search global-navi__search" role="search" method="get" action="/">
         <div class="search__box">
           <input type="text" class="search__input" name="s" placeholder="キーワード検索">
           <button type="submit" class="search__submit" style="background-image: url(dist/images/serch-icon.svg)">
@@ -140,12 +143,12 @@
         <div class="swiper-button-next main-next"></div>
         
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination main-visual__pagination"></div>
     </div>
     <!-- /main-visual -->
 
     <!-- news -->
-    <section class="news sec-news container">
+    <section class="news sec__news container">
       <div class="news__box">
         <div class="news__inner">
           <h2 class="head-title news__head-title">
@@ -177,7 +180,7 @@
     <!-- /news -->
 
     <!-- Type-select -->
-    <section class="type-select">
+    <section class="type-select section-margin">
       <div class="type-select__inner container">
         <a class="type-card type-select__type-card" href="https://ko-kosuge.jp/forvillager/">
           <div class="type-card__ribbon">
@@ -247,14 +250,484 @@
     </section>
     <!-- /Type-select -->
 
-    <!-- footer -->
-    <!-- /footer -->
+    <!-- contents -->
+    <div class="contents">
+      <div class="contents__inner container">
 
+        <!-- main -->
+        <main class="main">
+
+          <!-- blog -->
+          <section class="blog section-margin">
+            <div class="blog__head">
+              <h2 class="head-title blog__head-title head-title-margin">
+                <img src="dist/images/blog-h2-title.svg" alt="新着記事">
+              </h2>
+              <span class="head-subtitle blog__head-subtitle">小菅村の暮らし、観光、特産品など様々なテーマで記事を掲載</span>
+            </div>
+            <div class="blog__body">
+              <div class="blog__items">
+                <div class="blog__swiper swiper-container">
+                  <div class="blog__wrapper swiper-wrapper">
+                    <a class="blog-item blog__blog-item swiper-slide" href="/">
+                      <div class="blog-item__body">
+                        <div class="blog-item__category">暮らし</div>
+                        <figure class="blog-item__figure">
+                          <img src="dist/images/blog01.jpg" alt="blog01">
+                        </figure>
+                        <div class="blog-item__footer">
+                          <h3 class="blog-item__title">
+                            小菅姓発祥の地。歴史を感じる「小菅城址」、天神山の史跡をめぐって。
+                          </h3>
+                          <div class="blog-item__meta">
+                            <time class="blog-item__post-time" datetime="2020-02-18">2020.02.18</time>
+                            <div class="blog-item__link">続きを読む<i class="fas fa-angle-double-right"></i></div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                      
+                    </a>
+                    <a class="blog-item blog__blog-item swiper-slide" href="/">
+                      <div class="blog-item__body">
+                        <div class="blog-item__category">観光</div>
+                        <figure class="blog-item__figure">
+                          <img src="dist/images/blog02.jpg" alt="blog02">
+                        </figure>
+                        <div class="blog-item__footer">
+                          <h3 class="blog-item__title">
+                            田舎での新しい働き方！小菅村のテレワーク実践者にインタビュー！
+                          </h3>
+                          <div class="blog-item__meta">
+                            <time class="blog-item__post-time" datetime="2020-02-12">2020.02.12</time>
+                            <div class="blog-item__link">続きを読む<i class="fas fa-angle-double-right"></i></div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                      
+                    </a>
+                    <a class="blog-item blog__blog-item swiper-slide" href="/">
+                      <div class="blog-item__body">
+                        <div class="blog-item__category">特産品</div>
+                        <figure class="blog-item__figure">
+                          <img src="dist/images/blog03.jpg" alt="blog03">
+                        </figure>
+                        <div class="blog-item__footer">
+                          <h3 class="blog-item__title">
+                            田舎の子どもは、どんな感じ？小菅村の子どもたちに聞いてみた！村のこと・将来のこと
+                          </h3>
+                          <div class="blog-item__meta">
+                            <time class="blog-item__post-time" datetime="2020-02-04">2020.02.04</time>
+                            <div class="blog-item__link">続きを読む<i class="fas fa-angle-double-right"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination blog__pagination"></div>
+              </div>
+              <a class="link-btn blog__link-btn" href="/">過去の記事一覧<i class="fas fa-angle-double-right"></i></a>
+            </div>
+          </section>
+          <!-- /blog -->
+
+          <!-- sub-navigation -->
+          <section class="sub-navigation section-margin">
+            <div class="categories sub-navigation__box">
+              <div class="sub-navigation__head">
+                <h2 class="head-title categories__head-title head-title-margin_s">
+                  <img src="dist/images/category-h2-title.svg" alt="カテゴリ一覧">
+                </h2>
+                <span class="underline"></span>
+              </div>
+              <div class="sub-navigation__categories">
+                <a class="category sub-navigation__category-item" href="/">暮らし</a>
+                <a class="category sub-navigation__category-item" href="/">観光</a>
+                <a class="category sub-navigation__category-item" href="/">特産品</a>
+                <a class="category sub-navigation__category-item" href="/">他カテゴリー</a>
+                <a class="category sub-navigation__category-item" href="/">暮らし</a>
+                <a class="category sub-navigation__category-item" href="/">観光</a>
+                <a class="category sub-navigation__category-item" href="/">特産品</a>
+                <a class="category sub-navigation__category-item" href="/">他カテゴリー</a>
+                <a class="category sub-navigation__category-item" href="/">暮らし</a>
+                <a class="category sub-navigation__category-item" href="/">観光</a>
+                <a class="category sub-navigation__category-item" href="/">特産品</a>
+                <a class="category sub-navigation__category-item" href="/">他カテゴリー</a>
+                <a class="category sub-navigation__category-item" href="/">暮らし</a>
+                <a class="category sub-navigation__category-item" href="/">観光</a>
+                <a class="category sub-navigation__category-item" href="/">特産品</a>
+                <!-- <a class="category sub-navigation__category-item" href="/">他カテゴリー</a> -->
+              </div>
+            </div>
+            <div class="free-search sub-navigation__free-search">
+              <div class="sub-navigation__box">
+                <div class="sub-navigation__head">
+                  <h2 class="head-title free-search__head-title head-title-margin_s">
+                    <img src="dist/images/search-h2-title.svg" alt="カテゴリ一覧">
+                  </h2>
+                  <span class="underline"></span>
+                </div>
+                <p class="free-search__lead-text">
+                  探したい情報のキーワードを入力してください。
+                </p>
+                <form class="search_size_s free-search__search" role="search" method="get" action="/">
+                  <div class="search__box">
+                    <input type="text" class="search__input" name="s" placeholder="キーワード検索">
+                    <button type="submit" class="search__submit" style="background-image: url(dist/images/serch-icon.svg)">
+                      <!-- <img src="dist/images/serch-icon.svg" alt="検索"> -->
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <!-- /sub-navigation -->
+
+          <!-- tourism-info -->
+          <section class="tourism-info section-margin">
+            <div class="tourism-info__head">
+              <h2 class="head-title tourism-info__head-title head-title-margin">
+                <img src="dist/images/tourism-h2-title.svg" alt="新着記事">
+              </h2>
+              <span class="head-subtitle blog__head-subtitle">小菅村の観光スポット、食事処、宿泊施設等の情報を掲載</span>
+            </div>
+            <div class="tourism-info__items">
+              <a class="tourism-item tourism-info__tourism-item" href="https://ko-kosuge.jp/cat_kosuge/kosugeplay/">
+                <div class="tourism-item__body">
+                  <figure class="tourism-item__figure">
+                    <img src="dist/images/tourism-activity.jpg" alt="遊ぶ">
+                  </figure>
+                  <div class="tourism-item__footer">
+                    <p class="tourism-item__description">
+                      小菅村でのアクティビティ・見どころについてご紹介。
+                    </p>
+                    <div class="link-btn_size_s tourism-item__link">詳しく見る</div>
+                  </div>
+                </div>
+                <h3 class="tourism-item__title">
+                  <img src="dist/images/baroon-01.svg" alt="遊ぶ">
+                </h3>
+              </a>
+              <a class="tourism-item tourism-info__tourism-item" href="https://ko-kosuge.jp/cat_kosuge/kosugeeat/">
+                <div class="tourism-item__body">
+                  <figure class="tourism-item__figure">
+                    <img src="dist/images/tourism-food.jpg" alt="遊ぶ">
+                  </figure>
+                  <div class="tourism-item__footer">
+                    <p class="tourism-item__description">
+                      小菅村周辺のお食事処をご紹介。
+                      <br class="br-sp">
+                      小菅村に訪れたら必ず行くべきお店
+                    </p>
+                    <div class="link-btn_size_s tourism-item__link">詳しく見る</div>
+                  </div>
+                </div>
+                <h3 class="tourism-item__title">
+                  <img src="dist/images/baroon-02.svg" alt="食べる">
+                </h3>
+              </a>
+              <a class="tourism-item tourism-info__tourism-item" href="https://ko-kosuge.jp/cat_kosuge/kosugestay/">
+                <div class="tourism-item__body">
+                  <figure class="tourism-item__figure">
+                    <img src="dist/images/tourism-stay.jpg" alt="遊ぶ">
+                  </figure>
+                  <div class="tourism-item__footer">
+                    <p class="tourism-item__description">
+                      小菅村には現在11の宿泊施設があります。旅館や民宿、キャンプ場など形態はさまざま。
+                    </p>
+                    <div class="link-btn_size_s tourism-item__link">詳しく見る</div>
+                  </div>
+                </div>
+                <h3 class="tourism-item__title">
+                  <img src="dist/images/baroon-03.svg" alt="泊まる">
+                </h3>
+              </a>
+            </div>
+          </section>
+          <!-- /tourism-info -->
+
+          <!-- sns-field -->
+          <section class="sns-field section-margin">
+            <div class="sns-field__head">
+              <h2 class="head-title sns-field__head-title head-title-margin">
+                <img src="dist/images/sns-h2-title.svg" alt="小菅村と繋がる">
+              </h2>
+              <span class="head-subtitle blog__head-subtitle">「こ、こすげぇー」の公式SNSアカウント。旬な情報をいち早く発信。</span>
+            </div>
+            <div class="sns-field__body">
+              <div class="sns-field__left">
+                <!-- Instagram -->
+                <div class="instagram sns-field__instagram">
+                  <h3 class="instagram__head sns-field__head3"><img src="dist/images/insta-h3-title.svg" alt="Instagram"></h3>
+                  <div class="instgaram__body">
+                    <img src="dist/images/instagram-feed.jpg" alt="">
+                  </div>
+                </div>
+                <!-- /Instagram -->
+              </div>
+              <div class="sns-field__right">
+                <!-- Twitter -->
+                <div class="twitter sns-field__twitter">
+                  <h3 class="twitter__head sns-field__head3"><img src="dist/images/twitter-h3-title.svg" alt="Twitter"></h3>
+                  <div class="twitter__body">
+                    
+                    <!-- Twitter Publish埋め込み -->
+                    <a class="twitter-timeline" href="https://twitter.com/ko_kosuge?ref_src=twsrc%5Etfw">Tweets by ko_kosuge</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <!-- /Twitter Publish埋め込み -->
+
+                  </div>
+                </div>
+                <!-- /Twitter -->
+
+                <!-- Facebook -->
+                <div class="facebook sns-field__facebook">
+                  <h3 class="facebook__head sns-field__head3"><img src="dist/images/facebook-h3-title.svg" alt="Facebook"></h3>
+                  <div class="facebook__body">
+
+                    <!-- Facebook埋め込み -->
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v11.0&appId=2417469551876200&autoLogAppEvents=1" nonce="bIVeXlWZ"></script>
+                      <!-- '<div class="fb-page" data-href="https://www.facebook.com/kokosuge/" data-tabs="timeline" data-width="'+ w + '" data-height="' + h + '" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/kokosuge/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kokosuge/">こ、こすげぇー〈小菅村の総合情報サイト〉</a></blockquote></div>' -->
+                    <!-- /Facebook埋め込み -->
+                  </div>
+                </div>
+                <!-- /Facebook -->
+              </div>
+            </div>
+
+          </section>
+          <!-- /sns-field -->
+
+        </main>
+        <!-- /main -->
+
+        <!-- sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar__inner">
+            <div class="banner">
+              <div class="banner__items">
+                <div class="banner__swiper swiper-container js-banner__swiper0">
+                  <div class="banner__wrapper swiper-wrapper">
+                    <a class="banner__slide swiper-slide" href="https://ko-kosuge.jp/kokosugeshop/">
+                      <img src="dist/images/shouten2021.jpg" alt="こ、こすげぇー商店">
+                    </a>
+                    <a class="banner__slide swiper-slide" href="https://ko-kosuge.jp/forvillager/">
+                      <img src="dist/images/forvillager2.jpg" alt="小菅村民の皆さんはこちら">
+                    </a>
+                    <a class="banner__slide swiper-slide" href="https://www.instagram.com/explore/tags/%E3%81%93%E3%81%99%E3%81%92%E3%82%B8%E3%82%A7%E3%83%8B%E3%83%83%E3%82%AF/">
+                      <img src="dist/images/bnr_kosugegenic.jpg" alt="こすげジェニック">
+                    </a>
+                    <a class="banner__slide swiper-slide" href="https://www.instagram.com/explore/tags/%E3%81%93%E3%81%99%E3%81%92%E3%82%B8%E3%82%A7%E3%83%8B%E3%83%83%E3%82%AF/">
+                      <picture>
+                        <!-- 1200px以上の時のバナー画像 -->
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="dist/images/bannerpoint.jpg">
+                        <!-- 1199px以下の時のバナー画像 -->
+                        <source media="(max-width: 1199px)" type="image/png" srcset="dist/images/bannerpoint-sp.png">
+                        <img src="dist/images/bannerpoint.jpg" alt="こすげ村人ポイントカードができました！">
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-paginatiion banner__pagination0"></div>
+              </div>
+            </div>
+            <div class="ranking">
+              <div class="ranking__head">
+                <h2 class="head-title ranking__head-title head-title-margin">
+                  <img src="dist/images/ranking-h2-title.svg" alt="人気記事ランキング">
+                </h2>
+              </div>
+
+              <!-- WordPress Popular Posts -->
+              <ul class="ranking__items">
+                <li class="ranking-item ranking__ranking-item" data-item="1">
+                  <a class="ranking-item__link" href="/">
+                    <figure class="ranking-item__figure">
+                      <img src="dist/images/blog03.jpg" alt="blog03">
+                    </figure>
+                    <div class="ranking-item__body">
+                      <h3 class="ranking-item__title">田舎の子どもは、どんな感じ？小菅村の子どもたちに聞いてみた…</h3>
+                      <time class="ranking-item__post-time" datetime="2020-02-04">2020.02.04</time>
+                    </div>
+                  </a>
+                </li>
+                <li class="ranking-item ranking__ranking-item" data-item="1">
+                  <a class="ranking-item__link" href="/">
+                    <figure class="ranking-item__figure">
+                      <img src="dist/images/blog02.jpg" alt="blog02">
+                    </figure>
+                    <div class="ranking-item__body">
+                      <h3 class="ranking-item__title">田舎での新しい働き方！小菅村のテレワーク実践者にインタビュ…</h3>
+                      <time class="ranking-item__post-time" datetime="2020-02-12">2020.02.12</time>
+                    </div>
+                  </a>
+                </li>
+                <li class="ranking-item ranking__ranking-item" data-item="1">
+                  <a class="ranking-item__link" href="/">
+                    <figure class="ranking-item__figure">
+                      <img src="dist/images/blog01.jpg" alt="blog01">
+                    </figure>
+                    <div class="ranking-item__body">
+                      <h3 class="ranking-item__title">小菅姓発祥の地。歴史を感じる「小菅城址」、天神山の史跡を</h3>
+                      <time class="ranking-item__post-time" datetime="2020-02-18">2020.02.18</time>
+                    </div>
+                  </a>
+                </li>
+                <li class="ranking-item ranking__ranking-item" data-item="1">
+                  <a class="ranking-item__link" href="/">
+                    <figure class="ranking-item__figure">
+                      <img src="dist/images/blog05.jpg" alt="blog05">
+                    </figure>
+                    <div class="ranking-item__body">
+                      <h3 class="ranking-item__title">ここにタイトルが入ります。ここにタイトルが入ります。ここにタイトルが入ります。</h3>
+                      <time class="ranking-item__post-time" datetime="2020-12-15">2020.12.15</time>
+                    </div>
+                  </a>
+                </li>
+                <li class="ranking-item ranking__ranking-item" data-item="1">
+                  <a class="ranking-item__link" href="/">
+                    <figure class="ranking-item__figure">
+                      <img src="dist/images/blog04.jpg" alt="blog04">
+                    </figure>
+                    <div class="ranking-item__body">
+                      <h3 class="ranking-item__title">小菅小学校ってどんなところ？vol.1先生から見た小菅村と子どもたちとは。</h3>
+                      <time class="ranking-item__post-time" datetime="2020-12-15">2020.12.15</time>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- WordPress Popular Posts -->
+
+            </div>
+            <div class="banner">
+              <div class="banner__items">
+                <div class="banner__swiper swiper-container js-banner__swiper1">
+                  <div class="banner__wrapper swiper-wrapper">
+                    <a class="banner__slide swiper-slide" href="http://kosuge-eki.jp/">
+                      <img src="dist/images/bnr_01.png" alt="道の駅こすげ">
+                    </a>
+                    <a class="banner__slide swiper-slide" href="http://kosugenoyu.jp/">
+                      <img src="dist/images/bnr_02.png" alt="多摩源流温泉小菅の湯">
+                    </a>
+                    <a class="banner__slide swiper-slide" href="https://www.fa-kosuge.com/">
+                      <img src="dist/images/bnr_03.png" alt="FOREST ADVENTURE KOSUGE">
+                    </a>
+                    <a class="banner__slide swiper-slide" href="https://fishingvillage.jp/">
+                      <img src="dist/images/FVbanner.gif" alt="小菅フィッシングヴィレッジ">
+                    </a>
+                    <a class="banner__slide swiper-slide" href="http://kosugeminamoto.jp/">
+                      <img src="dist/images/bnr_04.png" alt="株式会社源">
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-paginatiion banner__pagination1"></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- /sidebar -->
+      </div>
+    </div>
+    <!-- /contents -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="logo footer__logo"><a href="/"><img src="dist/images/logo.png" alt="こ、こすげぇー。小菅村を楽しむ総合情報サイト"></a></div>
+        <div class="footer__body">
+          <div class="footer__left">
+            <ul class="sns footer__sns">
+              <li class="sns__item header__sns-item"><a class="sns__link" href="https://twitter.com/ko_kosuge" target="_blank"  rel="noopener noreferrer"><img src="dist/images/twitter.svg" alt="twitter"></a></li>
+              <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.facebook.com/kokosuge/" target="_blank"  rel="noopener noreferrer"><img src="dist/images/facebook.svg" alt="facebook"></a></li>
+              <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.instagram.com/kokosuge/" target="_blank"  rel="noopener noreferrer"><img src="dist/images/instagram.svg" alt="instagram"></a></li>
+              <li class="sns__item header__sns-item"><a class="sns__link" href="https://www.youtube.com/channel/UC2QMMiJRuwxRoK4C7FtcGmQ" target="_blank"  rel="noopener noreferrer"><img src="dist/images/youtube.svg" alt="youtube"></a></li>
+            </ul>
+            <div class="company">
+              <h2 class="company__name">【運営会社】<br>株式会社 源</h2>
+              <address class="company__address">
+                <li>〒409--211<br>山梨県北都留郡小菅村3445番地</li>
+                <li>MAIL:<a href="mailto:kokosuge@kosugeminamoto.jp">kokosuge@kosugeminamoto.jp</a></li>
+                
+              </address>
+            </div>
+          </div>
+          <div class="footer__middle">
+            <h2 class="site-map__title js-accordion">
+              <div class="container">
+                <i class="fas fa-list"></i>サイトマップ<i class="fas fa-caret-down"></i>
+              </div>
+            </h2>
+              
+            <nav class="site-map js-sitemap">
+              <ul class="site-map__list">
+                <li class="site-map__item"><a class="site-map__link" href="/">TOPページ</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="https://ko-kosuge.jp/kosugemura/">過ごし方</a></li>
+                <ul class="site-map__list--second">
+                  <li class="site-map__item--second">
+                    <a class="site-map__link--second" href="https://ko-kosuge.jp/kosugemura/about/"><i class="fas fa-caret-right"></i>小菅村ってどんなところ?</a>
+                  </li>
+                  <li class="site-map__item--second">
+                    <a class="site-map__link--second" href="https://ko-kosuge.jp/cat_kosuge/kokosuge/"><i class="fas fa-caret-right"></i>こ、こすげぇーについて</a>
+                  </li>
+                  <li class="site-map__item--second">
+                    <a class="site-map__link--second" href="https://ko-kosuge.jp/cat_kosuge/access/"><i class="fas fa-caret-right"></i>アクセス</a>
+                  </li>
+                  <li class="site-map__item--second">
+                    <a class="site-map__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeplay/"><i class="fas fa-caret-right"></i>遊ぶ</a>
+                  </li>
+                  <li class="site-map__item--second">
+                    <a class="site-map__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugeeat/"><i class="fas fa-caret-right"></i>食べる</a>
+                  </li>
+                  <li class="site-map__item--second">
+                    <a class="site-map__link--second" href="https://ko-kosuge.jp/cat_kosuge/kosugestay/"><i class="fas fa-caret-right"></i>泊まる</a>
+                  </li>
+                </ul>
+              </ul>
+              <ul class="site-map__list">
+                <li class="site-map__item"><a class="site-map__link" href="https://ko-kosuge.jp/forvillager/">小菅村民向け情報</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="/">新着情報</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="/">新着記事</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="https://ko-kosuge.jp/covid2019/">新型コロナウィルス対策まとめ</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="https://ko-kosuge.jp/spring2021/">冬の小菅村特集2020-2021</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="https://ko-kosuge.jp/pointcard/">こすげ村人ポイントカード</a></li>
+                <ul class="site-map__list--second">
+                  <li class="site-map__item--second">
+                    <a class="site-map__link--second" href="https://ko-kosuge.jp/kosugemura/about/"><i class="fas fa-caret-right"></i>加盟店一覧</a>
+                  </li>
+                </ul>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__right">
+            <nav class="site-map__sub">
+              <ul class="site-map__list">
+                <li class="site-map__item"><a class="site-map__link" href="/">運営会社</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="/">プライバシーポリシー</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="/">利用規約</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="/">掲載希望の方</a></li>
+                <li class="site-map__item"><a class="site-map__link" href="/">約款・標識</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <p class="footer__copyright">
+        <small class="footer__copyright-text">Copyright &copy; 2021 MINAMOTO All Rights Reserved.</small>
+      </p>
+       <!-- トップへ戻るボタン -->
+       <div class="floating">
+        <a href="#"><img src="dist/images/top.svg" alt="トップへ戻るボタン"></a>
+      </div>
+    </footer>
+    <!-- /footer -->
   </div>
   
   
 <!-- Swiper読み込み -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
 <script src="src/js/main.js"></script>
 </body>
 </html>

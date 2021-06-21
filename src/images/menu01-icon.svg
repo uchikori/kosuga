@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g id="menu01-icon" transform="translate(-313 -153)">
-    <rect id="長方形_43" data-name="長方形 43" width="24" height="24" transform="translate(313 153)" fill="none"/>
-    <g id="家" transform="translate(313 154)">
-      <path id="パス_32" data-name="パス 32" d="M20.3,36.605V31.037H17.055v2.325l-2.578-2.578L12,28.3,0,40.293,1.777,42.07,12,31.852,22.22,42.07,24,40.293Z" transform="translate(0 -28.3)" fill="#fff"/>
-      <path id="パス_33" data-name="パス 33" d="M78.8,143.3v8.043h6.337v-5.412h3.937v5.413h6.337V143.3l-8.3-8.3Z" transform="translate(-75.107 -129.999)" fill="#fff"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path data-name="長方形 43" fill="none" d="M0 0h24v24H0z"/><g fill="#fff"><path data-name="パス 32" d="M20.3 9.305V3.737h-3.245v2.325l-2.578-2.578L12 1 0 12.993l1.777 1.777L12 4.552 22.22 14.77 24 12.993z"/><path data-name="パス 33" d="M3.693 14.301v8.043h6.337v-5.412h3.937v5.413h6.337v-8.044l-8.3-8.3z"/></g></svg>

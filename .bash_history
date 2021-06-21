@@ -15,3 +15,9 @@ git commit -m[]
 git push origin master
 git branch header
 git checkout header
+git add -A
+git commit -m[]
+git push origin type
+git branch mainContents
+git checkout mainCVontents
+git checkout mainContents

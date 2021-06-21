@@ -11,15 +11,6 @@
             padding: 1.2rem 0;
         }
     }
-    &__logo{
-        width: 368px;
-        @include pc{
-            width: 36.8rem;
-        }
-        @include tab{
-            width: 24.8rem;
-        }
-    }
     &__sns{
         margin-right: 32px;
         margin-left: auto;

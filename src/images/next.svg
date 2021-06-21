@@ -1,7 +1,1 @@
-<svg id="next" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect id="長方形_11" data-name="長方形 11" width="64" height="64" rx="32" fill="#abc94e" opacity="0.8"/>
-  <g id="グループ_6" data-name="グループ 6" transform="translate(44.824 31.646) rotate(135)">
-    <rect id="長方形_12" data-name="長方形 12" width="24" height="1" transform="translate(1 0)" fill="#fff"/>
-    <rect id="長方形_13" data-name="長方形 13" width="24" height="1" transform="translate(1 0) rotate(90)" fill="#fff"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect data-name="長方形 11" width="64" height="64" rx="32" fill="#abc94e" opacity=".8"/><g data-name="グループ 6" fill="#fff"><path data-name="長方形 12" d="M44.117 32.353l-16.97 16.97-.708-.706 16.97-16.971z"/><path data-name="長方形 13" d="M44.117 32.353l-16.97-16.97.706-.708 16.971 16.971z"/></g></svg>

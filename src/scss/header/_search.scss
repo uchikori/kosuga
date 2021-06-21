@@ -3,10 +3,10 @@
     @include pc{
         width: 26.8rem;
     }
-    &_size_l{
-        width: 20rem;
-        @include wide-pc{
-            width: 200px;
+    &_size_s{
+        width: 100%;
+        @include pc{
+            width: 100%;
         }
     }
     &__box{

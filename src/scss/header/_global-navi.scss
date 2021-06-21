@@ -60,10 +60,12 @@
         position: relative;
         z-index: 10;
         background-color: $color-green;
-        transition: filter 0.3s ease;
+        opacity: 1;
+        transition: opacity 0.3s ease;
         &:hover{
-            transition: filter 0.3s ease;
-            filter: brightness(120%);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            
         }
         &:after{
             content: '';
