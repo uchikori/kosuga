@@ -30,3 +30,6 @@ git commit -m[]
 git push origin mainContents
 git branch fix
 git checkout fix
+git add -A
+git commit -m[]
+git push origin fix

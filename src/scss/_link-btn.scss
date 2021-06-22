@@ -7,10 +7,10 @@
     line-height: 48px;
     border-radius: 24px;
     background-color: $color-link;
-    transition: filter 0.3s ease;
+    transition: background-color 0.3s ease;
     &:hover{
-        filter: brightness(150%);
-        transition: filter 0.3s ease;
+        background-color: $color-orange;
+        transition: background-color 0.3s ease;
         i{
             transition: transform 0.3s ease;
             transform: translateX(50%);
@@ -40,6 +40,7 @@
         line-height: 28px;
         border-radius: 14px;
         background-color: $color-link;
+        transition: background-color 0.3s ease;
         @include pc{
             font-size: 1.6rem;
             width: 15.8rem;

@@ -126,7 +126,6 @@
         }
     }
     &__link{
-        transition: filter 0.3s ease;
         margin: auto auto 0 auto;
         @include sp{
             margin: 0;
@@ -144,8 +143,9 @@
                 transition: transform 0.3s ease;
             }
         }
-        .tourism-item__link{
-            filter: brightness(150%);
+        .link-btn_size_s{
+            background-color: $color-orange;
+            transition: background-color 0.3s ease;
         }
     }
 }

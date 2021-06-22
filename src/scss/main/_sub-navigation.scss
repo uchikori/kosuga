@@ -55,6 +55,9 @@
     }
     &__head-title{
         width: 153px;
+        @include pc{
+            width: 15.3rem;
+        }
     }
 }
 .category{
@@ -65,6 +68,11 @@
     padding: 0 16px;
     background-color: $color-green;
     border-radius: 12px;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: $color-orange;
+        transition: background-color 0.3s ease;
+    }
     @include pc{
         font-size: 1.4rem;
         line-height: 2.4rem;

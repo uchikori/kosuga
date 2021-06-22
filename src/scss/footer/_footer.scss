@@ -154,7 +154,7 @@
         }
     }
     &__list--second{
-        padding-left: 12px;
+        padding: 10px 0 10px 12px;
     }
     &__item{
         padding: 12px 0;
@@ -184,6 +184,18 @@
         @include tab{
             font-size: 1.4rem;
             color: $color-white;
+        }
+    }
+}
+.site-map__sub{
+    .site-map__link{
+        @include tab{
+            font-size: 1.6rem;
+        }
+    }
+    .site-map__link--second{
+        @include tab{
+            font-size: 1.4rem;
         }
     }
 }
