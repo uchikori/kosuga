@@ -55,7 +55,9 @@
         }
     }
     &__logo{
-        text-align: center;
+        @include tab{
+            margin: 0 auto;
+        }
     }
     &__body{
         display: flex;
@@ -111,9 +113,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    &.open{
-
-    }
     @include pc{
         flex-direction: column;
     }
@@ -134,14 +133,6 @@
             padding: 1rem 0;
             background-color: $color-green;
 
-        }
-        .fa-list{
-            @include font-style(2rem, $color-white, bold);
-            margin-right: 1rem;
-        }
-        .fa-caret-down{
-            @include font-style(2rem, $color-white, bold);
-            margin-left: 2rem;
         }
     }
     &__list{
@@ -185,6 +176,18 @@
             font-size: 1.4rem;
             color: $color-white;
         }
+    }
+    
+}
+.fa-list{
+    @include font-style(2rem, $color-white, bold);
+    margin-right: 1rem;
+}
+.fa-caret-down{
+    @include font-style(2rem, $color-white, bold);
+    margin-left: 2rem;
+    .open &{
+        transform: rotateX(180deg);
     }
 }
 .site-map__sub{

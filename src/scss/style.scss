@@ -32,13 +32,14 @@ html{
 body{
     width: 100%;
     font-size: 1.6rem;
-
     position: relative;
     background-image: url('../images/background.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
+    &.fixed{
+        position: fixed;
+    }
 }
 img{
     width: 100%;
@@ -227,12 +228,12 @@ img[src$=".svg"]{
         margin-bottom: 4rem;
     }
     &__head-title{
-        width: 228px;
+        width: 158px;
         @include pc{
-            width: 22.8rem;
+            width: 15.8rem;
         }
         @include tab{
-            width: 22.4rem;
+            width: 15.4rem;
         }
 
     }
@@ -334,26 +335,26 @@ img[src$=".svg"]{
             }
         }
     }
-    &:after{
-        content: attr(data-item);
-        @include font-style(24px, $color-white, bold);
-        width: 41px;
-        height: 41px;
-        border-radius: 8px 0 0 0;
-        background-color: $color-green;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        @include pc{
-            font-size: 2.4rem;
-            width: 4.1rem;
-            height: 4.1rem;
-            border-radius: 0.8rem 0 0 0;
-        }
-    }
+    // &:after{
+    //     content: attr(data-item);
+    //     @include font-style(24px, $color-white, bold);
+    //     width: 41px;
+    //     height: 41px;
+    //     border-radius: 8px 0 0 0;
+    //     background-color: $color-green;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     @include pc{
+    //         font-size: 2.4rem;
+    //         width: 4.1rem;
+    //         height: 4.1rem;
+    //         border-radius: 0.8rem 0 0 0;
+    //     }
+    // }
     &:nth-child(1){
         &:after{
             background-color: $color-rank1;

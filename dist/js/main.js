@@ -154,12 +154,15 @@ jQuery(window).on('load resize', function () {
 
 var humberger = document.querySelector('.humberger');
 var menuToggle = document.querySelector('.global-navi');
+var body = document.body;
 humberger.addEventListener('click', function () {
   humberger.classList.toggle('menu-active');
 
   if (humberger.classList.contains('menu-active')) {
+    body.classList.add('fixed');
     menuToggle.classList.add('menu-open');
   } else {
+    body.classList.remove('fixed');
     menuToggle.classList.remove('menu-open');
   }
 });
@@ -248,16 +251,16 @@ jQuery(window).on('load resize', function () {
       return;
     }
   }
-}); //サイトマップの横幅調整
+}); //サイトマップの開閉
 
 var accordion = jQuery('.js-accordion');
 var siteMap = jQuery('.js-sitemap');
 accordion.click(function () {
-  if (siteMap.hasClass('open')) {
-    siteMap.removeClass('open');
+  if (accordion.hasClass('open')) {
+    accordion.removeClass('open');
     siteMap.slideUp();
   } else {
-    siteMap.addClass('open');
+    accordion.addClass('open');
     siteMap.slideDown();
   }
 });

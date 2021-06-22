@@ -33,3 +33,6 @@ git checkout fix
 git add -A
 git commit -m[]
 git push origin fix
+git add -A
+git commit -m[]
+git push origin fix

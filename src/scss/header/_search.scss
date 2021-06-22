@@ -36,6 +36,9 @@
     }
     &__submit{
         display: inline-block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         width: 16px;
         height: 16px;
         @include pc{

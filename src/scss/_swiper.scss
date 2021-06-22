@@ -2,6 +2,7 @@
     width: 64px;
     height: 64px;
     outline: none;
+    background-image: none;
     @include pc{
         width: 6.4rem;
         height: 6.4rem;
@@ -31,37 +32,6 @@
             }
         }
     }
-    &.next-common{
-        right: -64px;
-        transition: filter 0.3s ease;
-        @include pc{
-            right: -6.4rem;
-        }
-        @include tab{
-            right: -3rem;
-        }
-        &:after{
-            content: '\f054';
-            display: block;
-            font-size: 3rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 30px;
-            }
-            @include tab{
-                font-size: 2.4rem;
-            }
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
 
 
 
@@ -69,6 +39,7 @@
 .swiper-button-prev{
     width: 64px;
     height: 64px;
+    background-image: none;
     outline: none;
     @include pc{
         width: 6.4rem;
@@ -91,37 +62,6 @@
             background-repeat: no-repeat;
             background-position: center;
             transition: opacity 0.3s ease;
-        }
-        &:hover{
-            &:after{
-                transition: opacity 0.3s ease;
-                opacity: 1;
-            }
-        }
-    }
-    &.prev-common{
-        left: -6.4rem;
-        @include wide-pc{
-            left: -64px;
-        }
-        @include tab{
-            left: -3rem;
-        }
-        &:after{
-            content: '\f053';
-            display: block;
-            font-size: 3rem;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: $color-white;
-            opacity: 0.4;
-            transition: opacity 0.3s ease;
-            @include wide-pc{
-                font-size: 30px;
-            }
-            @include tab{
-                font-size: 2.4rem;
-            }
         }
         &:hover{
             &:after{
