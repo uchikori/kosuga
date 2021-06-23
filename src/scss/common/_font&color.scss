@@ -2,9 +2,6 @@
 $font: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
 $font-ie: 'メイリオ', Meiryo, sans-serif;
 
-$font-main:'Nothing You Could Do', cursive;
-$font-mincho: YuMincho,'Yu Mincho', serif;
-
 /*フォントカラー*/
 $color-black:     #333333;
 $color-link:      #993A22;
@@ -20,6 +17,7 @@ $color-rank2:     #959595;
 $color-rank3:     #993A22;
 $color-bg:        #E0EBD1;
 $color-border:    #333333;
+
 /*font-size, font-color, line-height指定*/
 @mixin font-style($font-size, $font-color, $font-weight){
     font-size: $font-size;

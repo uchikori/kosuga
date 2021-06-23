@@ -93,6 +93,12 @@
         align-items: center;
         border-top: solid 1px $color-green;
         padding: 16px 0;
+        &:hover{
+            .news__title{
+                color: $color-orange;
+                transition: color 0.3s ease;
+            }
+        }
         @include pc{
             padding: 1.6rem 0;
         }
@@ -122,10 +128,12 @@
     &__title{
         @include font-style(16px, $color-black, normal);
         line-height: 1;
+        text-align: left;
         display: -webkit-box;
         overflow: hidden;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
+        transition: color 0.3s ease;
         @include pc{
             font-size: 1.6rem;
         }

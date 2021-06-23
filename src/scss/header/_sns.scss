@@ -4,6 +4,11 @@
         display: inline-block;
         width: 32px;
         height: 32px;
+        transition: opacity 0.3s ease;
+        &:hover{
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
         @include pc{
             width: 3.2rem;
             height: 3.2rem;

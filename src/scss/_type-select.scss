@@ -84,8 +84,15 @@
         box-shadow: 0 0 6px rgba(0, 0, 0, .26);
         transition: opacity 0.3s ease, box-shadow 0.3s ease;
         .type-card__figure{
+            overflow: hidden;
+            object-fit: cover;
+            position: relative;
             img{
                 transform: scale(1.1);
+                -webkit-transition: -webkit-transform 0.3s ease;
+                -moz-transition: -moz-transform 0.3s ease;
+                -o-transition: -o-transform 0.3s ease;
+                -ms-transition: -ms-transform 0.3s ease;
                 transition: transform 0.3s ease;
                 
             }
@@ -163,6 +170,7 @@
         object-fit: cover;
         position: relative;
         border-radius: 6px;
+        z-index: 1;
         @include pc{
             height: 17.3rem;
             margin-bottom: 0.8rem;

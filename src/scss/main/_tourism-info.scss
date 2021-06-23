@@ -54,6 +54,7 @@
         position: absolute;
         top: -26px;
         left: -24px;
+        z-index: 2;
         @include pc{
             width: 8rem;
             height: 8rem;
@@ -88,6 +89,7 @@
         object-fit: cover;
         position: relative;
         border-radius: 10px;
+        z-index: 1;
         @include pc{
             height: 17.3rem;
             margin-bottom: 1.7rem;

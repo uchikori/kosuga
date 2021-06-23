@@ -2,7 +2,7 @@
     background-color: #E0EBD1;
 
     &__inner{
-        padding: 80px 0 67px 0;
+        padding: 80px 0 48px 0;
         position: relative;
         &:before{
             content: '';
@@ -48,7 +48,7 @@
             }
         }
         @include pc{
-            padding: 8rem 0 6.7rem 0;
+            padding: 8rem 0 4.8rem 0;
         }
         @include tab{
             padding: 2.4rem 0 11.4rem 0;
@@ -75,6 +75,13 @@
             margin: 2.4rem 0 2.2rem 0;
             text-align: center;
         }
+    }
+    &__middle{
+        margin-left: auto;
+        @include tab{
+            margin-left: 0;
+        }
+        
     }
     &__sns{
         margin-bottom: 38px;
@@ -136,9 +143,15 @@
         }
     }
     &__list{
-        margin: 0 28px;
+        margin-right: 64px;
+        .footer__right &{
+            margin-right: 0;
+        }
         @include pc{
-            margin: 0 2.8rem;
+            margin-right: 2.8rem;
+            .footer__right &{
+                margin-right: 0;
+            }
         }
         @include tab{
             margin: 0 auto;
@@ -157,10 +170,26 @@
         @include font-style(16px, $color-black, bold);
         line-height: 1;
         text-decoration: underline;
+        transition: color 0.3s ease;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        &:hover{
+            color: $color-orange;
+            transition: color 0.3s ease;
+        }
     }
     &__link--second{
         @include font-style(14px, $color-black, normal);
         line-height: 1;
+        transition: color 0.3s ease;
+        @include pc{
+            font-size: 1.4rem;
+        }
+        &:hover{
+            color: $color-orange;
+            transition: color 0.3s ease;
+        }
         i{
             margin-right: 8px;
         }

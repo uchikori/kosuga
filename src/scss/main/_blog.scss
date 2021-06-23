@@ -106,6 +106,7 @@
         object-fit: cover;
         position: relative;
         border-radius: 12px;
+        z-index: 1;
         @include pc{
             height: 17.4rem;
             margin-bottom: 1.2rem;
